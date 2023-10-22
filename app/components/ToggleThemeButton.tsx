@@ -34,7 +34,7 @@ export default function ThemeButton() {
         <Image
           src={lunatoneImage}
           alt="lunatone image"
-          width={100}
+          width={60}
           priority={true}
           className="hover:scale-125 duration-300"
         />
@@ -42,7 +42,7 @@ export default function ThemeButton() {
         <Image
           src={solrockImage}
           alt="solrock image"
-          width={100}
+          width={60}
           priority={true}
           className="hover:scale-125 duration-300"
         />

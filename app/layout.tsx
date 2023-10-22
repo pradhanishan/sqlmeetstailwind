@@ -2,6 +2,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Providers from "./providers";
 import { Metadata } from "next";
+import Header from "./components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning={true}>
       <body className={inter.className}>
         <Providers>
-          <div className="flex min-h-screen">{children}</div>
+          <div className="flex flex-col min-h-screen relative">
+            <Header />
+            {children}
+          </div>
         </Providers>
       </body>
     </html>
