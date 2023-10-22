@@ -1,3 +1,6 @@
+
+
+import NavigationDrawer from "./NavigationDrawer";
 import ToggleThemeButton from "./ToggleThemeButton";
 import { Dancing_Script } from "next/font/google";
 
@@ -14,6 +17,8 @@ export default function Header() {
       flex justify-between items-center
       "
     >
+      {/* NavigationDrawer */}
+      <NavigationDrawer />
       {/* heading container */}
       <div className="flex flex-col justify-center items-center group">
         {/* Upper heading */}
