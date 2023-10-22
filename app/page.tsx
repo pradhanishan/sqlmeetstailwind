@@ -1,11 +1,9 @@
-import Image from "next/image";
-
-import x from "@/public/images/sprites/aggron.png";
+import ToggleThemeButton from "./components/ToggleThemeButton";
 
 export default function Home() {
   return (
-    <div>
-      <Image src={x} alt="s" />
+    <div className="flex flex-grow justify-center items-center color-primary">
+      <ToggleThemeButton />
     </div>
   );
 }
