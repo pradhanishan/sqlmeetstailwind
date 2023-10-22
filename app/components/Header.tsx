@@ -1,6 +1,6 @@
 
 
-import NavigationDrawer from "./NavigationDrawer";
+import NavigationDrawer from "./Navigation";
 import ToggleThemeButton from "./ToggleThemeButton";
 import { Dancing_Script } from "next/font/google";
 
