@@ -2,10 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-.color-primary {
-  @apply bg-white;
+/* use this class when setting page backgrounds */
+.page-bg-primary {
   @apply text-slate-900;
   @apply bg-gradient-to-b from-white to-gray-500;
   @apply dark:bg-gradient-to-br dark:from-slate-900 dark:to-sky-900;
   @apply dark:text-white;
+}
+
+/* styles for tables */
+td {
+  @apply border-b-2;
+  @apply border-slate-400;
+  @apply dark:border-gray-600;
+}
+
+th,
+td {
+  @apply px-6 py-3;
+  @apply whitespace-nowrap;
+}
+
+th {
+  @apply bg-gray-400;
+  @apply text-slate-900;
+  @apply dark:bg-slate-500;
+  @apply dark:text-gray-300;
+}
+
+td {
+  @apply bg-gray-300;
+  @apply text-slate-700;
+  @apply dark:bg-slate-800;
+  @apply dark:text-gray-400;
 }

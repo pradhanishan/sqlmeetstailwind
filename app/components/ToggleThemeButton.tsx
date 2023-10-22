@@ -1,3 +1,9 @@
+/*
+
+This client component is a button that toggles light and dark mode
+
+*/
+
 "use client";
 
 import { useTheme } from "next-themes";
