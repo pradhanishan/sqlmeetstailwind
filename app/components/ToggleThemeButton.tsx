@@ -8,6 +8,9 @@ This client component is a button that toggles light and dark mode
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import solrockImage from "@/public/images/sprites/solrock.png";
+import lunatoneImage from "@/public/images/sprites/lunatone.png";
+import Image from "next/image";
 
 export default function ThemeButton() {
   const { resolvedTheme, setTheme } = useTheme();
@@ -27,7 +30,23 @@ export default function ThemeButton() {
         setTheme(resolvedTheme === "dark" ? "light" : "dark");
       }}
     >
-      {resolvedTheme === "dark" ? "switch to light" : "switch to dark"}
+      {resolvedTheme === "dark" ? (
+        <Image
+          src={lunatoneImage}
+          alt="lunatone image"
+          width={100}
+          priority={true}
+          className="hover:scale-125 duration-300"
+        />
+      ) : (
+        <Image
+          src={solrockImage}
+          alt="solrock image"
+          width={100}
+          priority={true}
+          className="hover:scale-125 duration-300"
+        />
+      )}
     </button>
   );
 }
