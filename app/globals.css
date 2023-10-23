@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-
-GLOBAL STYLE RULES
-
-1. Only define styles to fixed elements
-2. Do not create custom classes to style elements.
-
-*/
-
 /* styles for main start*/
 main {
   @apply bg-white;
@@ -45,11 +36,22 @@ td {
 }
 
 /* styles for tables end*/
-
-.scrollbar-hidden::-webkit-scrollbar {
+div::-webkit-scrollbar {
   width: 0;
 }
+/* styles for scrollbar end*/
 
-div {
-  @apply scrollbar-hidden;
+/* styles for headings start*/
+h3 {
+  @apply font-bold text-2xl lowercase;
+  @apply text-slate-900 dark:text-white;
 }
+
+/* styles for headings end*/
+
+/*paragraph start*/
+p {
+  @apply bg-gray-100 dark:bg-slate-700 p-2 rounded-lg
+         text-slate-900 dark:text-white w-full;
+}
+/*paragraph end*/
