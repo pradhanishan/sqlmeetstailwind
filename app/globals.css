@@ -2,32 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-/* text classes start */
-.text-primary {
-  @apply text-slate-900 dark:text-white;
-}
-/* text classes end */
+/*
 
-/* shadow class start */
-.shadow-primary {
-  @apply shadow-md shadow-gray-400 dark:shadow-sm dark:shadow-sky-400;
-}
-/* shadow class end */
+GLOBAL STYLE RULES
 
-/* bg class start */
+1. Only define styles to fixed elements
+2. Do not create custom classes to style elements.
 
-.bg-primary {
+*/
+
+/* styles for main start*/
+main {
   @apply bg-white;
-  @apply dark:bg-slate-900;
-}
-
-/* use this class when setting page backgrounds */
-.page-bg-primary {
-  @apply bg-gradient-to-b from-white to-gray-400;
   @apply dark:bg-gradient-to-br dark:from-slate-900 dark:to-sky-900;
+  @apply pt-24 px-4 sm:px-12  md:px-20;
+  @apply flex flex-col flex-grow justify-start items-center;
 }
-
-/* bg class end */
+/* styles for main end*/
 
 /* styles for tables start*/
 td {
@@ -54,3 +45,11 @@ td {
 }
 
 /* styles for tables end*/
+
+.scrollbar-hidden::-webkit-scrollbar {
+  width: 0;
+}
+
+div {
+  @apply scrollbar-hidden;
+}

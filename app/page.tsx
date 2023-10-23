@@ -6,7 +6,7 @@ import { pokemon } from "@/public/data/pokemon";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-grow justify-start items-center page-bg-primary pt-20 px-4">
+    <main>
       {/* <Table data={pokemon.data} headers={pokemon.headers} /> */}
       {/* <ToggleThemeButton /> */}
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, commodi
@@ -19,6 +19,6 @@ export default function Home() {
       consequatur vero vitae possimus, quam quas excepturi dicta non magni
       officia eligendi ipsam! Minima atque molestias temporibus magnam velit
       dolorum dolore ab, provident perferendis, corporis harum.
-    </div>
+    </main>
   );
 }
