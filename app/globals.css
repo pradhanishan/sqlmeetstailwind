@@ -13,13 +13,12 @@ GLOBAL STYLE RULES
 
 /* styles for main start*/
 main {
-  @apply bg-gradient-to-b from-white to-gray-400;
+  @apply bg-white;
   @apply dark:bg-gradient-to-br dark:from-slate-900 dark:to-sky-900;
   @apply pt-24 px-4 sm:px-12  md:px-20;
   @apply flex flex-col flex-grow justify-start items-center;
 }
 /* styles for main end*/
-
 
 /* styles for tables start*/
 td {
@@ -46,3 +45,11 @@ td {
 }
 
 /* styles for tables end*/
+
+.scrollbar-hidden::-webkit-scrollbar {
+  width: 0;
+}
+
+div {
+  @apply scrollbar-hidden;
+}
