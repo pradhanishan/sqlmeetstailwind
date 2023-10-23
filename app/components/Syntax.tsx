@@ -1,4 +1,4 @@
-export default function Query({
+export default function Syntax({
   query,
 }: {
   query: {
@@ -17,13 +17,13 @@ export default function Query({
 
   return (
     <div
-      id="uery-container"
-      className="bg-gray-100 dark:bg-slate-700 px-6 py-2  text-slate-900 dark:text-white
+      id="syntax-container"
+      className="bg-gray-100 dark:bg-slate-700 px-6 py-2 rounded-lg text-slate-900 dark:text-white w-full lg:w-1/4
     shadow-sm
      shadow-gray-400 dark:shadow-sm dark:shadow-sky-400
     "
     >
-      <h4 className="font-bold text-sm text-center">Query</h4>
+      <h4 className="font-bold text-sm text-center">Syntax</h4>
       {queryLines}
     </div>
   );

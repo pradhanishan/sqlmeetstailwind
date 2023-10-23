@@ -58,12 +58,17 @@ export default function Table({
     );
   });
   return (
-    <div className="overflow-x-auto rounded-md shadow-md shadow-gray-400 dark:shadow-sm dark:shadow-sky-400">
+    <div
+      className="overflow-auto 
+      flex justify-center items-center"
+    >
       <table>
-        <thead>
+        <thead className="shadow-md
+     shadow-gray-400 dark:shadow-sm dark:shadow-sky-400">
           <tr>{tableHeadrs}</tr>
         </thead>
-        <tbody>{tableData}</tbody>
+        <tbody className="shadow-sm
+     shadow-gray-400 dark:shadow-sm dark:shadow-sky-400">{tableData}</tbody>
       </table>
     </div>
   );

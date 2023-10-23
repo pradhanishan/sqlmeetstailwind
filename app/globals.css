@@ -7,7 +7,9 @@ main {
   @apply bg-white;
   @apply dark:bg-gradient-to-br dark:from-slate-900 dark:to-sky-900;
   @apply pt-24 px-4 sm:px-12  md:px-20;
-  @apply flex flex-col flex-grow justify-start items-center;
+  @apply flex flex-col flex-grow justify-start;
+  @apply space-y-4;
+  @apply min-w-[250px];
 }
 /* styles for main end*/
 
@@ -19,7 +21,7 @@ td {
 
 th,
 td {
-  @apply px-6 py-3;
+  @apply px-1 py-3 sm:px-6 text-sm;
   @apply whitespace-nowrap;
 }
 
@@ -50,8 +52,5 @@ h3 {
 /* styles for headings end*/
 
 /*paragraph start*/
-p {
-  @apply bg-gray-100 dark:bg-slate-700 p-2 rounded-lg
-         text-slate-900 dark:text-white w-full;
-}
+
 /*paragraph end*/
