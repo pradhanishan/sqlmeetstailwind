@@ -6,7 +6,7 @@
 main {
   @apply bg-white;
   @apply dark:bg-gradient-to-br dark:from-slate-900 dark:to-sky-900;
-  @apply pt-24 px-8 sm:px-20  md:px-32 lg:px-48 xl:px-80;
+  @apply pt-24 px-8 sm:px-20  md:px-32 lg:px-48 xl:px-64;
   @apply flex flex-col flex-grow justify-start;
   @apply space-y-4;
   @apply min-w-[250px];
