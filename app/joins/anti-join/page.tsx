@@ -1,18 +1,21 @@
 import Image from "next/image";
+import charmeleonSprite from "@/public/images/sprites/charmeleon.png";
+import eeveeSprite from "@/public/images/sprites/eevee.png";
+import rioluSprite from "@/public/images/sprites/riolu.png";
+import vaporeonSprite from "@/public/images/sprites/vaporeon.png";
 import duskullSprite from "@/public/images/sprites/duskull.png";
-import umbreonSprite from "@/public/images/sprites/umbreon.png";
 import alakazamSprite from "@/public/images/sprites/alakazam.png";
 import Table from "@/app/components/Table";
-// fire, water, normal, fighting, ghost, psychic
+// fire, water, normal, riolu, ghost, psychic
 export default function AntiJoin() {
   return (
     <main>
       {/* Heading and synonym */}
       <section id="header-section">
         <div className="flex flex-col justify-center items-start">
-          <h3>Right join</h3>
+          <h3>Anti join</h3>
           <span className="text-sm text-gray-500 dark:text-sky-400">
-            (right outer join)
+            (left anti join, complement join, minus join)
           </span>
         </div>
       </section>
@@ -20,30 +23,28 @@ export default function AntiJoin() {
       <section id="description-section">
         <div className="flex flex-col justify-center items-start">
           <p>
-            A right join, within the realm of relational databases and SQL
+            An anti join, within the realm of relational databases and SQL
             (Structured Query Language), is a query operation that combines data
             from two or more tables based on a specified condition or common
             column values. <br />
             <br />
-            Unlike an inner join, which only retrieves rows with matching values
-            in both tables, a right join includes all rows from the right (or
-            second) table and the matching rows from the left (or first) table.
-            If there are no matching rows in the left table, the result will
-            still contain data from the right table, with null values for the
-            left table columns. <br />
+            However, unlike an inner join that retrieves rows with matching
+            values, an anti join does the opposite. It returns rows from the
+            first table (usually the left table) where there are no
+            corresponding values in the second table (usually the right table).
+            In other words, it identifies records in the left table that have no
+            related data in the right table. <br />
             <br />
-            In simpler terms, a right join returns a result set that preserves
-            all records from the right table while incorporating related data
-            from the left table when available, making it a useful tool for
-            scenarios where you want to maintain the integrity of the right
-            table data and include associated information from the left table.{" "}
+            In simpler terms, an anti join produces a result set that helps you
+            discover and isolate data in the left table that is missing or does
+            not have corresponding values in the right table. It is a valuable
+            tool when you want to identify and analyze data discrepancies or
+            outliers. <br />
             <br />
-            <br />
-            This operation is commonly employed to analyze data relationships,
-            track missing data, and create comprehensive reports that include
-            all available information from the right table and any related data
-            from the left table. It a valuable feature for data analysis and
-            reporting in relational database systems. <br />
+            The anti join is often used to find missing or unmatched data,
+            investigate data anomalies, and conduct data quality assessments. It
+            plays a crucial role in data validation and integrity checks within
+            relational database systems. <br />
           </p>
         </div>
       </section>
@@ -55,16 +56,16 @@ export default function AntiJoin() {
             <span className="font-bold text-gray-600 dark:text-sky-400">
               SELECT{" "}
             </span>
-            <span className="italic">column1, column2, ...</span>
+            <span className="italic">t1.column1, t1.column2, ...</span>
             <br />
             <span className="font-bold text-gray-600 dark:text-sky-400">
               FROM
             </span>
-            <span className="italic"> table1 </span>
+            <span className="italic"> table1 t1</span>
             <span className="font-bold text-gray-700 dark:text-sky-300">
-              RIGHT JOIN{" "}
+              LEFT ANTI JOIN{" "}
             </span>
-            <span className="italic">table2</span>
+            <span className="italic">table2 t2</span>
             <br />{" "}
             <span className="font-bold text-gray-600 dark:text-sky-400">
               ON{" "}
@@ -79,10 +80,10 @@ export default function AntiJoin() {
           <div>
             <h4>Example</h4>
             <p>
-              In this example, we will perform a right join between left table
-              pokemon and right table pokemonTypes to display the pokemon name
-              with its type by joining pokemon.typeId column with pokemonType.id
-              column.
+              In this example, we will perform a left anti join between left
+              table pokemon and right table pokemonTypes to display the pokemon
+              name with its type by joining pokemon.typeId column with
+              pokemonType.id column.
             </p>
           </div>
           <div>
@@ -105,8 +106,48 @@ export default function AntiJoin() {
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td>duskull</td>
+                  <td>charmeleon</td>
                   <td>type1</td>
+                  <td>
+                    <Image
+                      src={charmeleonSprite}
+                      alt="charmeleon-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>eevee</td>
+                  <td>type2</td>
+                  <td>
+                    <Image src={eeveeSprite} alt="eevee-sprite" width={50} />
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>riolu</td>
+                  <td>type3</td>
+                  <td>
+                    <Image src={rioluSprite} alt="riolu-sprite" width={50} />
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>alakazam</td>
+                  <td>type4</td>
+                  <td>
+                    <Image
+                      src={alakazamSprite}
+                      alt="alakazam-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>duskull</td>
+                  <td>type5</td>
                   <td>
                     <Image
                       src={duskullSprite}
@@ -116,25 +157,13 @@ export default function AntiJoin() {
                   </td>
                 </tr>
                 <tr>
-                  <td>2</td>
-                  <td>umbreon</td>
-                  <td>type2</td>
+                  <td>6</td>
+                  <td>vaporeon</td>
+                  <td>type6</td>
                   <td>
                     <Image
-                      src={umbreonSprite}
-                      alt="umbreon-sprite"
-                      width={50}
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>alakazam</td>
-                  <td>type3</td>
-                  <td>
-                    <Image
-                      src={alakazamSprite}
-                      alt="alakazam-sprite"
+                      src={vaporeonSprite}
+                      alt="vaporeon-sprite"
                       width={50}
                     />
                   </td>
@@ -153,40 +182,32 @@ export default function AntiJoin() {
                 <tr>
                   <td>type1</td>
                   <td>
-                    <span className="bg-zinc-700  px-4 rounded-md py-1 text-white">
-                      ghost
+                    <span className="bg-red-300  px-4 rounded-md py-1 text-slate-900">
+                      fire
                     </span>
                   </td>
                 </tr>
                 <tr>
                   <td>type2</td>
                   <td>
-                    <span className="bg-black  px-4 rounded-md py-1 text-white">
-                      dark
+                    <span className="bg-orange-500  px-4 rounded-md py-1 text-slate-900">
+                      normal
                     </span>
                   </td>
                 </tr>
                 <tr>
                   <td>type3</td>
                   <td>
-                    <span className="bg-rose-300  px-4 rounded-md py-1 text-slate-900">
-                      psychic
+                    <span className="bg-orange-800  px-4 rounded-md py-1 text-white">
+                      fighting
                     </span>
                   </td>
                 </tr>
                 <tr>
                   <td>type4</td>
                   <td>
-                    <span className="bg-yellow-300  px-4 rounded-md py-1 text-slate-900">
-                      electric
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>type5</td>
-                  <td>
-                    <span className="bg-blue-300  px-4 rounded-md py-1 text-slate-900">
-                      water
+                    <span className="bg-rose-300  px-4 rounded-md py-1 text-slate-900">
+                      psychic
                     </span>
                   </td>
                 </tr>
@@ -201,14 +222,14 @@ export default function AntiJoin() {
               <span className="font-bold text-gray-600 dark:text-sky-400">
                 SELECT{" "}
               </span>
-              <span className="italic">p.name, t.type, p.sprite</span>
+              <span className="italic">p.name, p.sprite</span>
               <br />
               <span className="font-bold text-gray-600 dark:text-sky-400">
                 FROM
               </span>
               <span className="italic"> pokemon as p </span>
               <span className="font-bold text-gray-700 dark:text-sky-300">
-                RIGHT JOIN{" "}
+                LEFT ANTI JOIN{" "}
               </span>
               <span className="italic">pokemonType as t</span>
               <br />{" "}
@@ -226,18 +247,12 @@ export default function AntiJoin() {
               <thead>
                 <tr>
                   <th>name</th>
-                  <th>type</th>
                   <th>sprite</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>duskull</td>
-                  <td>
-                    <span className="bg-zinc-700  px-4 rounded-md py-1 text-white">
-                      ghost
-                    </span>
-                  </td>
                   <td>
                     <Image
                       src={duskullSprite}
@@ -247,67 +262,9 @@ export default function AntiJoin() {
                   </td>
                 </tr>
                 <tr>
-                  <td>umbreon</td>
+                  <td>vaporeon</td>
                   <td>
-                    <span className="bg-black  px-4 rounded-md py-1 text-white">
-                      dark
-                    </span>
-                  </td>
-                  <td>
-                    <Image
-                      src={umbreonSprite}
-                      alt="duskull-sprite"
-                      width={50}
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>alakazam</td>
-                  <td>
-                    <span className="bg-rose-300  px-4 rounded-md py-1 text-slate-900">
-                      psychic
-                    </span>
-                  </td>
-                  <td>
-                    <Image
-                      src={alakazamSprite}
-                      alt="duskull-sprite"
-                      width={50}
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
-                      null
-                    </span>
-                  </td>
-                  <td>
-                    <span className="bg-yellow-300  px-4 rounded-md py-1 text-slate-900">
-                      electric
-                    </span>
-                  </td>
-                  <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
-                      null
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
-                      null
-                    </span>
-                  </td>
-                  <td>
-                    <span className="bg-blue-300  px-4 rounded-md py-1 text-slate-900">
-                      water
-                    </span>
-                  </td>
-                  <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
-                      null
-                    </span>
+                    <Image src={vaporeonSprite} alt="eevee-sprite" width={50} />
                   </td>
                 </tr>
               </tbody>
@@ -315,10 +272,9 @@ export default function AntiJoin() {
           </div>
           <div>
             <p>
-              Here all types from right tables are returned in the result. But
-              from the left table, only matching pokemon duskull, umbreon and
-              alakazam are returned whereas for types electric and water, their
-              pokemon will be null as no matching records are found
+              Here only the pokemon for which no matching type exists was
+              returned. Moreover, similar to a semi join, you can only get the
+              data from the left table in an anti join
             </p>
           </div>
         </div>
