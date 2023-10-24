@@ -4,7 +4,7 @@
 
 /* styles for main start*/
 main {
-  @apply bg-white;
+  @apply bg-gradient-to-b from-white to-gray-300;
   @apply dark:bg-gradient-to-br dark:from-slate-900 dark:to-sky-900;
   @apply pt-24 px-8 sm:px-20  md:px-32 lg:px-48 xl:px-64;
   @apply flex flex-col flex-grow justify-start;

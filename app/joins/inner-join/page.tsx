@@ -20,22 +20,19 @@ export default function InnerJoin() {
       <section id="description-section">
         <div className="flex flex-col justify-center items-start">
           <p>
-            An inner join, in the context of relational databases and SQL
-            (Structured Query Language), is a query operation that combines data
+            In the domain of relational databases and SQL (Structured Query
+            Language), an inner join serves as a query operation, merging data
             from two or more tables based on a specified condition or common
-            column values. <br />
+            column values. It exclusively retrieves rows where the joined
+            columns in the participating tables have matching values.
             <br />
-            It retrieves only the rows for which there is a match between the
-            columns being joined in the participating tables. <br />
             <br />
-            In other words, an inner join returns a result set containing only
-            the records that have corresponding values in both tables,
-            effectively filtering out non-matching rows. <br />
-            <br />
-            This operation is used to extract and consolidate data that has
-            shared characteristics or relationships between multiple tables,
-            making it a fundamental tool for data retrieval and analysis in
-            relational database systems. <br />
+            In simpler terms, an inner join provides a result set consisting
+            solely of records that share corresponding values in both tables,
+            effectively excluding non-matching rows. This operation is essential
+            for extracting and consolidating data with common characteristics or
+            connections across multiple tables, making it a fundamental tool for
+            data retrieval and analysis within relational database systems.
           </p>
         </div>
       </section>
@@ -44,12 +41,12 @@ export default function InnerJoin() {
         <div className="flex flex-col justify-center items-start">
           <h4>Syntax</h4>
           <p className="font-mono">
-            <span className="font-bold text-gray-600 dark:text-sky-400">
+            <span className="font-bold text-orange-500 dark:text-sky-400">
               SELECT{" "}
             </span>
             <span className="italic">column1, column2, ...</span>
             <br />
-            <span className="font-bold text-gray-600 dark:text-sky-400">
+            <span className="font-bold text-orange-500 dark:text-sky-400">
               FROM
             </span>
             <span className="italic"> table1 </span>
@@ -58,7 +55,7 @@ export default function InnerJoin() {
             </span>
             <span className="italic">table2</span>
             <br />{" "}
-            <span className="font-bold text-gray-600 dark:text-sky-400">
+            <span className="font-bold text-orange-500 dark:text-sky-400">
               ON{" "}
             </span>
             table1.column_name = table2.column_name;
@@ -78,7 +75,7 @@ export default function InnerJoin() {
             </p>
           </div>
           <div>
-            <h5>Source data</h5>
+            <h5>data</h5>
           </div>
           <div
             className="flex flex-col sm:items-stretch space-y-8 
@@ -186,12 +183,12 @@ export default function InnerJoin() {
           </div>
           <div>
             <p className="font-mono">
-              <span className="font-bold text-gray-600 dark:text-sky-400">
+              <span className="font-bold text-orange-500 dark:text-sky-400">
                 SELECT{" "}
               </span>
               <span className="italic">p.name, t.type, p.sprite</span>
               <br />
-              <span className="font-bold text-gray-600 dark:text-sky-400">
+              <span className="font-bold text-orange-500 dark:text-sky-400">
                 FROM
               </span>
               <span className="italic"> pokemon as p </span>
@@ -200,7 +197,7 @@ export default function InnerJoin() {
               </span>
               <span className="italic">pokemonType as t</span>
               <br />{" "}
-              <span className="font-bold text-gray-600 dark:text-sky-400">
+              <span className="font-bold text-orange-500 dark:text-sky-400">
                 ON{" "}
               </span>
               p.typeId = t.id;
