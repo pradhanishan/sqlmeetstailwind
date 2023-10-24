@@ -31,19 +31,19 @@ export default function LeftJoin() {
             first) table and the matching rows from the right (or second) table.
             If there are no matching rows in the right table, the result will
             still contain data from the left table, with null values for the
-            right table's columns. <br />
+            right table columns. <br />
             <br />
             In simpler terms, a left join returns a result set that preserves
             all records from the left table while incorporating related data
             from the right table when available, making it a useful tool for
             scenarios where you want to maintain the integrity of the left
-            table's data and include associated information from the right
+            table data and include associated information from the right
             table. <br />
             <br />
             This operation is commonly employed to analyze data relationships,
             track missing data, and create comprehensive reports that include
             all available information from the left table and any related data
-            from the right table. It's a valuable feature for data analysis and
+            from the right table. It a valuable feature for data analysis and
             reporting in relational database systems. <br />
           </p>
         </div>
