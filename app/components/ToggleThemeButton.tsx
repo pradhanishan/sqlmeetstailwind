@@ -36,6 +36,7 @@ export default function ThemeButton() {
           alt="lunatone image"
           width={60}
           priority={true}
+          quality={40}
           className="hover:scale-125 duration-300"
         />
       ) : (
@@ -44,6 +45,7 @@ export default function ThemeButton() {
           alt="solrock image"
           width={60}
           priority={true}
+          quality={40}
           className="hover:scale-125 duration-300"
         />
       )}

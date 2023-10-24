@@ -49,6 +49,7 @@ export default function Table({
                   width={50}
                   priority={true}
                   className="hover:scale-125 duration-300"
+                  quality={40}
                 />
               )}
             </td>
