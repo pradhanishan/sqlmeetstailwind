@@ -13,16 +13,16 @@ export default function DrawerBody({
     name: string;
     href: string;
   }[] = [
-    { key: "nav-item-0", name: "Introduction", href: "joins" },
-    { key: "nav-item-1", name: "Inner Join", href: "inner-join" },
-    { key: "nav-item-2", name: "Left Join", href: "inner-join" },
-    { key: "nav-item-3", name: "Right Join", href: "inner-join" },
-    { key: "nav-item-4", name: "Full Join", href: "inner-join" },
-    { key: "nav-item-5", name: "Cross Join", href: "inner-join" },
-    { key: "nav-item-6", name: "Semi Join", href: "inner-join" },
-    { key: "nav-item-7", name: "Anti Join", href: "inner-join" },
-    { key: "nav-item-8", name: "Natural Join", href: "inner-join" },
-    { key: "nav-item-9", name: "Self Join", href: "inner-join" },
+    { key: "nav-item-0", name: "Introduction", href:"/joins" },
+    { key: "nav-item-1", name: "Inner Join", href:"/joins/inner-join" },
+    { key: "nav-item-2", name: "Left Join", href:"/joins/inner-join" },
+    { key: "nav-item-3", name: "Right Join", href:"/joins/inner-join" },
+    { key: "nav-item-4", name: "Full Join", href:"/joins/inner-join" },
+    { key: "nav-item-5", name: "Cross Join", href:"/joins/inner-join" },
+    { key: "nav-item-6", name: "Semi Join", href:"/joins/inner-join" },
+    { key: "nav-item-7", name: "Anti Join", href:"/joins/inner-join" },
+    { key: "nav-item-8", name: "Natural Join", href:"/joins/inner-join" },
+    { key: "nav-item-9", name: "Self Join", href:"/joins/inner-join" },
   ];
 
   const navItems = navItemsData.map((item) => {

@@ -58,7 +58,12 @@ export default function Table({
     );
   });
   return (
-    <div className="overflow-x-auto rounded-md shadow-md shadow-gray-400 dark:shadow-sm dark:shadow-sky-400">
+    <div
+      className="overflow-auto  shadow-md
+      shadow-gray-500 dark:shadow-sm dark:shadow-sky-400
+      inline-block rounded-md  bg-gray-200 dark:bg-slate-800;
+      @apply text-slate-800 dark:text-gray-400;"
+    >
       <table>
         <thead>
           <tr>{tableHeadrs}</tr>
