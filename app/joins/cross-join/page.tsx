@@ -3,6 +3,9 @@ import duskullSprite from "@/public/images/sprites/duskull.png";
 import umbreonSprite from "@/public/images/sprites/umbreon.png";
 import alakazamSprite from "@/public/images/sprites/alakazam.png";
 import Table from "@/app/components/Table";
+
+// dragon, fairy, bug
+
 export default function CrossJoin() {
   return (
     <main>
