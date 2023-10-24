@@ -36,6 +36,7 @@ th {
 
 td {
   @apply lowercase;
+  @apply even:font-bold;
   @apply even:bg-gray-300 dark:even:bg-slate-700;
   @apply odd:bg-gray-200 dark:odd:bg-slate-800;
   @apply text-slate-800 dark:text-gray-400;

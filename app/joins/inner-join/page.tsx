@@ -1,21 +1,13 @@
-import { pokemon } from "@/public/data/pokemon";
-import { filterPokemonDataByName } from "@/util/dataFilterUtilities";
-import { pokemonTypes } from "@/public/data/pokemon-type";
-import { filterPokemonTypesByName } from "@/util/dataFilterUtilities";
+import Image from "next/image";
+import charmeleonSprite from "@/public/images/sprites/charmeleon.png";
+import treeckoSprite from "@/public/images/sprites/treecko.png";
+import vaporeonSprite from "@/public/images/sprites/vaporeon.png";
+import jolteonSprite from "@/public/images/sprites/jolteon.png";
 import Table from "@/app/components/Table";
 export default function InnerJoin() {
-  const filteredPokemonData = filterPokemonDataByName(
-    ["treecko", "charmeleon", "vaporeon", "jolteon"],
-    pokemon.data
-  );
-
-  const filteredPokemonTypes = filterPokemonTypesByName(
-    ["grass", "fire", "water"],
-    pokemonTypes.data
-  );
-
   return (
     <main>
+      {/* Heading and synonym */}
       <section id="header-section">
         <div className="flex flex-col justify-center items-start">
           <h3>Inner Join</h3>
@@ -24,6 +16,7 @@ export default function InnerJoin() {
           </span>
         </div>
       </section>
+      {/* Description about the join */}
       <section id="description-section">
         <div className="flex flex-col justify-center items-start">
           <p>
@@ -46,6 +39,7 @@ export default function InnerJoin() {
           </p>
         </div>
       </section>
+      {/* Select syntax for the join */}
       <section id="query syntax">
         <div className="flex flex-col justify-center items-start">
           <h4>Syntax</h4>
@@ -62,15 +56,16 @@ export default function InnerJoin() {
             <span className="font-bold text-gray-700 dark:text-sky-300">
               INNER JOIN{" "}
             </span>
-            <span className="italic">table2</span>
+            <span className="italic">Table</span>
             <br />{" "}
             <span className="font-bold text-gray-600 dark:text-sky-400">
               ON{" "}
             </span>
-            table1.column_name = table2.column_name;
+            table1.column_name = Table.column_name;
           </p>
         </div>
       </section>
+      {/* Example section*/}
       <section id="source-data-section">
         <div className=" space-y-8">
           <div>
@@ -89,9 +84,102 @@ export default function InnerJoin() {
             className="flex flex-col sm:items-stretch space-y-8 
           sm:flex-row sm:space-y-0 sm:space-x-8 justify-center"
           >
-            <Table headers={pokemon.headers} data={filteredPokemonData} />
-
-            <Table headers={pokemonTypes.headers} data={filteredPokemonTypes} />
+            {/* Left table */}
+            <Table>
+              <thead>
+                <tr>
+                  <th>id</th>
+                  <th>name</th>
+                  <th>typeid</th>
+                  <th>sprite</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>charmeleon</td>
+                  <td>type1</td>
+                  <td>
+                    <Image
+                      src={charmeleonSprite}
+                      alt="charmeleon-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>treecko</td>
+                  <td>type2</td>
+                  <td>
+                    <Image
+                      src={treeckoSprite}
+                      alt="treecko-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>vaporeon</td>
+                  <td>type3</td>
+                  <td>
+                    <Image
+                      src={vaporeonSprite}
+                      alt="vaporeon-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>jolteon</td>
+                  <td>type4</td>
+                  <td>
+                    <Image
+                      src={jolteonSprite}
+                      alt="vaporeon-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </Table>
+            {/* Right Table */}
+            <Table>
+              <thead>
+                <tr>
+                  <th>id</th>
+                  <th>type</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>type1</td>
+                  <td>
+                    <span className="bg-red-300  px-4 rounded-md py-1 text-slate-900">
+                      fire
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>type2</td>
+                  <td>
+                    <span className="bg-green-300  px-4 rounded-md py-1 text-slate-900">
+                      grass
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>type3</td>
+                  <td>
+                    <span className="bg-blue-300  px-4 rounded-md py-1 text-slate-900">
+                      water
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </Table>
           </div>
           <div>
             <h5>Query</h5>
@@ -101,7 +189,7 @@ export default function InnerJoin() {
               <span className="font-bold text-gray-600 dark:text-sky-400">
                 SELECT{" "}
               </span>
-              <span className="italic">p.name as pokemon, t.name as type</span>
+              <span className="italic">p.name, t.type, p.sprite</span>
               <br />
               <span className="font-bold text-gray-600 dark:text-sky-400">
                 FROM
@@ -122,7 +210,62 @@ export default function InnerJoin() {
             <h5>Result</h5>
           </div>
           <div className="flex sm:justify-center">
-            <Table headers={pokemon.headers} data={filteredPokemonData} />
+            <Table>
+              <thead>
+                <tr>
+                  <th>name</th>
+                  <th>type</th>
+                  <th>sprite</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>charmeleon</td>
+                  <td>
+                    <span className="bg-red-300  px-4 rounded-md py-1 text-slate-900">
+                      fire
+                    </span>
+                  </td>
+                  <td>
+                    <Image
+                      src={charmeleonSprite}
+                      alt="treecko-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>treecko</td>
+                  <td>
+                    <span className="bg-green-300  px-4 rounded-md py-1 text-slate-900">
+                      grass
+                    </span>
+                  </td>
+                  <td>
+                    <Image
+                      src={treeckoSprite}
+                      alt="treecko-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>vaporeon</td>
+                  <td>
+                    <span className="bg-blue-300  px-4 rounded-md py-1 text-slate-900">
+                      water
+                    </span>
+                  </td>
+                  <td>
+                    <Image
+                      src={vaporeonSprite}
+                      alt="treecko-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </Table>
           </div>
           <div>
             <p>
