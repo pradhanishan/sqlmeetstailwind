@@ -15,14 +15,14 @@ export default function DrawerBody({
   }[] = [
     { key: "nav-item-0", name: "Introduction", href:"/joins" },
     { key: "nav-item-1", name: "Inner Join", href:"/joins/inner-join" },
-    { key: "nav-item-2", name: "Left Join", href:"/joins/inner-join" },
-    { key: "nav-item-3", name: "Right Join", href:"/joins/inner-join" },
-    { key: "nav-item-4", name: "Full Join", href:"/joins/inner-join" },
-    { key: "nav-item-5", name: "Cross Join", href:"/joins/inner-join" },
-    { key: "nav-item-6", name: "Semi Join", href:"/joins/inner-join" },
-    { key: "nav-item-7", name: "Anti Join", href:"/joins/inner-join" },
-    { key: "nav-item-8", name: "Natural Join", href:"/joins/inner-join" },
-    { key: "nav-item-9", name: "Self Join", href:"/joins/inner-join" },
+    { key: "nav-item-2", name: "Left Join", href:"/joins/left-join" },
+    { key: "nav-item-3", name: "Right Join", href:"/joins/right-join" },
+    { key: "nav-item-4", name: "Full Join", href:"/joins/full-join" },
+    { key: "nav-item-5", name: "Cross Join", href:"/joins/cross-join" },
+    { key: "nav-item-6", name: "Semi Join", href:"/joins/semi-join" },
+    { key: "nav-item-7", name: "Anti Join", href:"/joins/anti-join" },
+    { key: "nav-item-8", name: "Natural Join", href:"/joins/natural-join" },
+    { key: "nav-item-9", name: "Self Join", href:"/joins/self-join" },
   ];
 
   const navItems = navItemsData.map((item) => {

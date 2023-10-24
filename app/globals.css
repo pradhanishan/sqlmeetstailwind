@@ -6,7 +6,7 @@
 main {
   @apply bg-white;
   @apply dark:bg-gradient-to-br dark:from-slate-900 dark:to-sky-900;
-  @apply pt-24 px-8 sm:px-20  md:px-32 lg:px-48 xl:px-80;
+  @apply pt-24 px-8 sm:px-20  md:px-32 lg:px-48 xl:px-64;
   @apply flex flex-col flex-grow justify-start;
   @apply space-y-4;
   @apply min-w-[250px];
@@ -36,6 +36,7 @@ th {
 
 td {
   @apply lowercase;
+  @apply even:font-bold;
   @apply even:bg-gray-300 dark:even:bg-slate-700;
   @apply odd:bg-gray-200 dark:odd:bg-slate-800;
   @apply text-slate-800 dark:text-gray-400;

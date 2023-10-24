@@ -1,18 +1,19 @@
 import Image from "next/image";
-import charmeleonSprite from "@/public/images/sprites/charmeleon.png";
-import treeckoSprite from "@/public/images/sprites/treecko.png";
-import vaporeonSprite from "@/public/images/sprites/vaporeon.png";
 import jolteonSprite from "@/public/images/sprites/jolteon.png";
+import glaceonSprite from "@/public/images/sprites/glaceon.png";
+import arbokSprite from "@/public/images/sprites/arbok.png";
+import charmeleonSprite from "@/public/images/sprites/charmeleon.png";
+import eeveeSprite from "@/public/images/sprites/eevee.png";
 import Table from "@/app/components/Table";
-export default function InnerJoin() {
+export default function LeftJoin() {
   return (
     <main>
       {/* Heading and synonym */}
       <section id="header-section">
         <div className="flex flex-col justify-center items-start">
-          <h3>Inner Join</h3>
+          <h3>Left join</h3>
           <span className="text-sm text-gray-500 dark:text-sky-400">
-            (equijoin, join)
+            (left outer join)
           </span>
         </div>
       </section>
@@ -20,22 +21,30 @@ export default function InnerJoin() {
       <section id="description-section">
         <div className="flex flex-col justify-center items-start">
           <p>
-            An inner join, in the context of relational databases and SQL
+            A left join, within the realm of relational databases and SQL
             (Structured Query Language), is a query operation that combines data
             from two or more tables based on a specified condition or common
             column values. <br />
             <br />
-            It retrieves only the rows for which there is a match between the
-            columns being joined in the participating tables. <br />
+            Unlike an inner join, which only retrieves rows with matching values
+            in both tables, a left join includes all rows from the left (or
+            first) table and the matching rows from the right (or second) table.
+            If there are no matching rows in the right table, the result will
+            still contain data from the left table, with null values for the
+            right table's columns. <br />
             <br />
-            In other words, an inner join returns a result set containing only
-            the records that have corresponding values in both tables,
-            effectively filtering out non-matching rows. <br />
+            In simpler terms, a left join returns a result set that preserves
+            all records from the left table while incorporating related data
+            from the right table when available, making it a useful tool for
+            scenarios where you want to maintain the integrity of the left
+            table's data and include associated information from the right
+            table. <br />
             <br />
-            This operation is used to extract and consolidate data that has
-            shared characteristics or relationships between multiple tables,
-            making it a fundamental tool for data retrieval and analysis in
-            relational database systems. <br />
+            This operation is commonly employed to analyze data relationships,
+            track missing data, and create comprehensive reports that include
+            all available information from the left table and any related data
+            from the right table. It's a valuable feature for data analysis and
+            reporting in relational database systems. <br />
           </p>
         </div>
       </section>
@@ -54,7 +63,7 @@ export default function InnerJoin() {
             </span>
             <span className="italic"> table1 </span>
             <span className="font-bold text-gray-700 dark:text-sky-300">
-              INNER JOIN{" "}
+              LEFT JOIN{" "}
             </span>
             <span className="italic">table2</span>
             <br />{" "}
@@ -71,7 +80,7 @@ export default function InnerJoin() {
           <div>
             <h4>Example</h4>
             <p>
-              In this example, we will perform an inner join between left table
+              In this example, we will perform a left join between left table
               pokemon and right table pokemonTypes to display the pokemon name
               with its type by joining pokemon.typeId column with pokemonType.id
               column.
@@ -97,8 +106,40 @@ export default function InnerJoin() {
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td>charmeleon</td>
+                  <td>jolteon</td>
                   <td>type1</td>
+                  <td>
+                    <Image
+                      src={jolteonSprite}
+                      alt="jolteon-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>glaceon</td>
+                  <td>type2</td>
+                  <td>
+                    <Image
+                      src={glaceonSprite}
+                      alt="glaceon-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>arbok</td>
+                  <td>type3</td>
+                  <td>
+                    <Image src={arbokSprite} alt="arbok-sprite" width={50} />
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>charmeleon</td>
+                  <td>type4</td>
                   <td>
                     <Image
                       src={charmeleonSprite}
@@ -108,39 +149,11 @@ export default function InnerJoin() {
                   </td>
                 </tr>
                 <tr>
-                  <td>2</td>
-                  <td>treecko</td>
-                  <td>type2</td>
-                  <td>
-                    <Image
-                      src={treeckoSprite}
-                      alt="treecko-sprite"
-                      width={50}
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>vaporeon</td>
-                  <td>type3</td>
-                  <td>
-                    <Image
-                      src={vaporeonSprite}
-                      alt="vaporeon-sprite"
-                      width={50}
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>jolteon</td>
+                  <td>5</td>
+                  <td>eevee</td>
                   <td>type4</td>
                   <td>
-                    <Image
-                      src={jolteonSprite}
-                      alt="vaporeon-sprite"
-                      width={50}
-                    />
+                    <Image src={eeveeSprite} alt="eevee-sprite" width={50} />
                   </td>
                 </tr>
               </tbody>
@@ -157,24 +170,24 @@ export default function InnerJoin() {
                 <tr>
                   <td>type1</td>
                   <td>
-                    <span className="bg-red-300  px-4 rounded-md py-1 text-slate-900">
-                      fire
+                    <span className="bg-yellow-300  px-4 rounded-md py-1 text-slate-900">
+                      electric
                     </span>
                   </td>
                 </tr>
                 <tr>
                   <td>type2</td>
                   <td>
-                    <span className="bg-green-300  px-4 rounded-md py-1 text-slate-900">
-                      grass
+                    <span className="bg-white  px-4 rounded-md py-1 text-slate-900">
+                      ice
                     </span>
                   </td>
                 </tr>
                 <tr>
                   <td>type3</td>
                   <td>
-                    <span className="bg-blue-300  px-4 rounded-md py-1 text-slate-900">
-                      water
+                    <span className="bg-purple-300  px-4 rounded-md py-1 text-slate-900">
+                      poison
                     </span>
                   </td>
                 </tr>
@@ -196,7 +209,7 @@ export default function InnerJoin() {
               </span>
               <span className="italic"> pokemon as p </span>
               <span className="font-bold text-gray-700 dark:text-sky-300">
-                INNER JOIN{" "}
+                LEFT JOIN{" "}
               </span>
               <span className="italic">pokemonType as t</span>
               <br />{" "}
@@ -220,10 +233,51 @@ export default function InnerJoin() {
               </thead>
               <tbody>
                 <tr>
+                  <td>jolteon</td>
+                  <td>
+                    <span className="bg-yellow-300  px-4 rounded-md py-1 text-slate-900">
+                      electric
+                    </span>
+                  </td>
+                  <td>
+                    <Image
+                      src={jolteonSprite}
+                      alt="treecko-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>glaceon</td>
+                  <td>
+                    <span className="bg-white  px-4 rounded-md py-1 text-slate-900">
+                      ice
+                    </span>
+                  </td>
+                  <td>
+                    <Image
+                      src={glaceonSprite}
+                      alt="treecko-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>arbok</td>
+                  <td>
+                    <span className="bg-purple-300  px-4 rounded-md py-1 text-slate-900">
+                      poison
+                    </span>
+                  </td>
+                  <td>
+                    <Image src={arbokSprite} alt="treecko-sprite" width={50} />
+                  </td>
+                </tr>
+                <tr>
                   <td>charmeleon</td>
                   <td>
-                    <span className="bg-red-300  px-4 rounded-md py-1 text-slate-900">
-                      fire
+                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
+                      null
                     </span>
                   </td>
                   <td>
@@ -235,33 +289,14 @@ export default function InnerJoin() {
                   </td>
                 </tr>
                 <tr>
-                  <td>treecko</td>
+                  <td>eevee</td>
                   <td>
-                    <span className="bg-green-300  px-4 rounded-md py-1 text-slate-900">
-                      grass
+                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
+                      null
                     </span>
                   </td>
                   <td>
-                    <Image
-                      src={treeckoSprite}
-                      alt="treecko-sprite"
-                      width={50}
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>vaporeon</td>
-                  <td>
-                    <span className="bg-blue-300  px-4 rounded-md py-1 text-slate-900">
-                      water
-                    </span>
-                  </td>
-                  <td>
-                    <Image
-                      src={vaporeonSprite}
-                      alt="treecko-sprite"
-                      width={50}
-                    />
+                    <Image src={eeveeSprite} alt="treecko-sprite" width={50} />
                   </td>
                 </tr>
               </tbody>
@@ -269,8 +304,10 @@ export default function InnerJoin() {
           </div>
           <div>
             <p>
-              Here only the result for matching pokemon and pokemonTypes are
-              returned. i.e, Jolteon, Charmeleon and Vaporen
+              Here all pokemon from left tables are returned in the result. But
+              from the right table, only matching types electric, ice and poison
+              are returned whereas for charmeleon and eevee, their types will be
+              null as no matching records are found
             </p>
           </div>
         </div>
