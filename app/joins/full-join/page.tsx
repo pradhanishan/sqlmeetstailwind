@@ -1,7 +1,9 @@
 import Image from "next/image";
-import duskullSprite from "@/public/images/sprites/duskull.png";
-import umbreonSprite from "@/public/images/sprites/umbreon.png";
-import alakazamSprite from "@/public/images/sprites/alakazam.png";
+import aggronSprite from "@/public/images/sprites/aggron.png";
+import cranidosSprite from "@/public/images/sprites/cranidos.png";
+import hippowdonSprite from "@/public/images/sprites/hippowdon.png";
+import rioluSprite from "@/public/images/sprites/riolu.png";
+
 import Table from "@/app/components/Table";
 export default function FullJoin() {
   return (
@@ -9,9 +11,9 @@ export default function FullJoin() {
       {/* Heading and synonym */}
       <section id="header-section">
         <div className="flex flex-col justify-center items-start">
-          <h3>Right join</h3>
+          <h3>Full join</h3>
           <span className="text-sm text-gray-500 dark:text-sky-400">
-            (right outer join)
+            (full outer join)
           </span>
         </div>
       </section>
@@ -19,30 +21,28 @@ export default function FullJoin() {
       <section id="description-section">
         <div className="flex flex-col justify-center items-start">
           <p>
-            A right join, within the realm of relational databases and SQL
+            A full join, in the realm of relational databases and SQL
             (Structured Query Language), is a query operation that combines data
             from two or more tables based on a specified condition or common
             column values. <br />
             <br />
-            Unlike an inner join, which only retrieves rows with matching values
-            in both tables, a right join includes all rows from the right (or
-            second) table and the matching rows from the left (or first) table.
-            If there are no matching rows in the left table, the result will
-            still contain data from the right table, with null values for the
-            left table columns. <br />
-            <br />
-            In simpler terms, a right join returns a result set that preserves
-            all records from the right table while incorporating related data
-            from the left table when available, making it a useful tool for
-            scenarios where you want to maintain the integrity of the right
-            table data and include associated information from the left table.{" "}
+            Unlike an inner join that retrieves only rows with matching values
+            in both tables, a full join includes all rows from both tables. It
+            ensures that no data is left behind, creating a result set that
+            incorporates records from both the left (or first) table and the
+            right (or second) table. If there are no matches for a particular
+            row in either table, null values are used to fill the missing data.{" "}
             <br />
             <br />
-            This operation is commonly employed to analyze data relationships,
-            track missing data, and create comprehensive reports that include
-            all available information from the right table and any related data
-            from the left table. It a valuable feature for data analysis and
-            reporting in relational database systems. <br />
+            In simpler terms, a full join provides a comprehensive result set
+            that includes all available information from both tables. It is a
+            powerful tool when you want to bring together data from different
+            sources or tables while preserving data integrity. <br />
+            <br />
+            This operation is often utilized to analyze data relationships,
+            discover missing data, and generate comprehensive reports that
+            encompass all data from both tables. It plays a crucial role in data
+            analysis and reporting within relational database systems. <br />
           </p>
         </div>
       </section>
@@ -61,7 +61,7 @@ export default function FullJoin() {
             </span>
             <span className="italic"> table1 </span>
             <span className="font-bold text-gray-700 dark:text-sky-300">
-              RIGHT JOIN{" "}
+              FULL JOIN{" "}
             </span>
             <span className="italic">table2</span>
             <br />{" "}
@@ -78,7 +78,7 @@ export default function FullJoin() {
           <div>
             <h4>Example</h4>
             <p>
-              In this example, we will perform a right join between left table
+              In this example, we will perform a full join between left table
               pokemon and right table pokemonTypes to display the pokemon name
               with its type by joining pokemon.typeId column with pokemonType.id
               column.
@@ -104,36 +104,44 @@ export default function FullJoin() {
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td>duskull</td>
+                  <td>aggron</td>
                   <td>type1</td>
                   <td>
-                    <Image
-                      src={duskullSprite}
-                      alt="duskull-sprite"
-                      width={50}
-                    />
+                    <Image src={aggronSprite} alt="aggron-sprite" width={50} />
                   </td>
                 </tr>
                 <tr>
                   <td>2</td>
-                  <td>umbreon</td>
+                  <td>cranidos</td>
                   <td>type2</td>
                   <td>
                     <Image
-                      src={umbreonSprite}
-                      alt="umbreon-sprite"
+                      src={cranidosSprite}
+                      alt="cranidos-sprite"
                       width={50}
                     />
                   </td>
                 </tr>
                 <tr>
                   <td>3</td>
-                  <td>alakazam</td>
+                  <td>hippowdon</td>
                   <td>type3</td>
                   <td>
                     <Image
-                      src={alakazamSprite}
-                      alt="alakazam-sprite"
+                      src={hippowdonSprite}
+                      alt="hippowdon-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>riolu</td>
+                  <td>type4</td>
+                  <td>
+                    <Image
+                      src={rioluSprite}
+                      alt="hippowdon-sprite"
                       width={50}
                     />
                   </td>
@@ -153,39 +161,31 @@ export default function FullJoin() {
                   <td>type1</td>
                   <td>
                     <span className="bg-zinc-700  px-4 rounded-md py-1 text-white">
-                      ghost
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>type2</td>
-                  <td>
-                    <span className="bg-black  px-4 rounded-md py-1 text-white">
-                      dark
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>type3</td>
-                  <td>
-                    <span className="bg-rose-300  px-4 rounded-md py-1 text-slate-900">
-                      psychic
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>type4</td>
-                  <td>
-                    <span className="bg-yellow-300  px-4 rounded-md py-1 text-slate-900">
-                      electric
+                      steel
                     </span>
                   </td>
                 </tr>
                 <tr>
                   <td>type5</td>
                   <td>
-                    <span className="bg-blue-300  px-4 rounded-md py-1 text-slate-900">
-                      water
+                    <span className="bg-pink-300  px-4 rounded-md py-1 text-slate-900">
+                      fairy
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>type3</td>
+                  <td>
+                    <span className="bg-stone-700  px-4 rounded-md py-1 text-white">
+                      ground
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>type6</td>
+                  <td>
+                    <span className="bg-emerald-700  px-4 rounded-md py-1 text-slate-900">
+                      bug
                     </span>
                   </td>
                 </tr>
@@ -207,7 +207,7 @@ export default function FullJoin() {
               </span>
               <span className="italic"> pokemon as p </span>
               <span className="font-bold text-gray-700 dark:text-sky-300">
-                RIGHT JOIN{" "}
+                FULL JOIN{" "}
               </span>
               <span className="italic">pokemonType as t</span>
               <br />{" "}
@@ -231,46 +231,57 @@ export default function FullJoin() {
               </thead>
               <tbody>
                 <tr>
-                  <td>duskull</td>
+                  <td>aggron</td>
                   <td>
                     <span className="bg-zinc-700  px-4 rounded-md py-1 text-white">
-                      ghost
+                      steel
+                    </span>
+                  </td>
+                  <td>
+                    <Image src={aggronSprite} alt="aggron-sprite" width={50} />
+                  </td>
+                </tr>
+                <tr>
+                  <td>cranidos</td>
+                  <td>
+                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
+                      null
                     </span>
                   </td>
                   <td>
                     <Image
-                      src={duskullSprite}
-                      alt="duskull-sprite"
+                      src={cranidosSprite}
+                      alt="cranidos-sprite"
                       width={50}
                     />
                   </td>
                 </tr>
                 <tr>
-                  <td>umbreon</td>
+                  <td>hippowdon</td>
                   <td>
-                    <span className="bg-black  px-4 rounded-md py-1 text-white">
-                      dark
+                    <span className="bg-stone-700  px-4 rounded-md py-1 text-white">
+                      ground
                     </span>
                   </td>
                   <td>
                     <Image
-                      src={umbreonSprite}
-                      alt="duskull-sprite"
+                      src={hippowdonSprite}
+                      alt="hippowdon-sprite"
                       width={50}
                     />
                   </td>
                 </tr>
                 <tr>
-                  <td>alakazam</td>
+                  <td>riolu</td>
                   <td>
-                    <span className="bg-rose-300  px-4 rounded-md py-1 text-slate-900">
-                      psychic
+                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
+                      null
                     </span>
                   </td>
                   <td>
                     <Image
-                      src={alakazamSprite}
-                      alt="duskull-sprite"
+                      src={rioluSprite}
+                      alt="hippowdon-sprite"
                       width={50}
                     />
                   </td>
@@ -282,8 +293,8 @@ export default function FullJoin() {
                     </span>
                   </td>
                   <td>
-                    <span className="bg-yellow-300  px-4 rounded-md py-1 text-slate-900">
-                      electric
+                    <span className="bg-pink-300  px-4 rounded-md py-1 text-slate-900">
+                      fairy
                     </span>
                   </td>
                   <td>
@@ -299,8 +310,8 @@ export default function FullJoin() {
                     </span>
                   </td>
                   <td>
-                    <span className="bg-blue-300  px-4 rounded-md py-1 text-slate-900">
-                      water
+                    <span className="bg-emerald-700  px-4 rounded-md py-1 text-slate-900">
+                      bug
                     </span>
                   </td>
                   <td>
@@ -314,10 +325,9 @@ export default function FullJoin() {
           </div>
           <div>
             <p>
-              Here all types from right tables are returned in the result. But
-              from the left table, only matching pokemon duskull, umbreon and
-              alakazam are returned whereas for types electric and water, their
-              pokemon will be null as no matching records are found
+              Here all matching types and pokemon from left and right tables are
+              returned. Also for types fairy and bug, null pokemon are returned.
+              And for pokemon cranidos and riolu, null types are returned.
             </p>
           </div>
         </div>

@@ -3,6 +3,7 @@ import duskullSprite from "@/public/images/sprites/duskull.png";
 import umbreonSprite from "@/public/images/sprites/umbreon.png";
 import alakazamSprite from "@/public/images/sprites/alakazam.png";
 import Table from "@/app/components/Table";
+// fire, water, normal, fighting, ghost, psychic
 export default function AntiJoin() {
   return (
     <main>
