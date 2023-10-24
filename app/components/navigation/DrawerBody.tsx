@@ -39,7 +39,7 @@ export default function DrawerBody({
   return (
     <div
       className="w-[250px] h-full bg-gray-300 dark:bg-gradient-to-br dark:from-slate-900 dark:to-sky-900 
-      flex flex-col justify-start items-center overflow-y-auto py-16 px-2 space-y-10
+      flex flex-col justify-start items-center overflow-y-auto py-16 px-2 space-y-10 scrollbar-hidden
     "
     >
       <div
