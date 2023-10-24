@@ -49,6 +49,7 @@ export default function Table({
                   width={50}
                   priority={true}
                   className="hover:scale-125 duration-300"
+                  quality={40}
                 />
               )}
             </td>
@@ -59,10 +60,12 @@ export default function Table({
   });
   return (
     <div
-      className="overflow-auto  shadow-md
-      shadow-gray-500 dark:shadow-sm dark:shadow-sky-400
-      inline-block rounded-md  bg-gray-200 dark:bg-slate-800;
-      @apply text-slate-800 dark:text-gray-400;"
+      className="overflow-auto 
+        bg-transparent rounded-md flex justify-center
+        shadow-sm shadow-gray-700 
+        dark:shadow-md
+        dark:shadow-sky-700 max-w-fit
+        "
     >
       <table>
         <thead>

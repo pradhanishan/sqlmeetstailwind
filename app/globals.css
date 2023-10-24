@@ -15,6 +15,7 @@ main {
 /* styles for main end*/
 
 /* styles for tables start*/
+
 td {
   @apply border-b;
   @apply border-slate-400 dark:border-gray-600;
@@ -39,11 +40,16 @@ td {
   @apply odd:bg-gray-200 dark:odd:bg-slate-800;
   @apply text-slate-800 dark:text-gray-400;
 }
-
-/* styles for tables end*/
+/* 
+styles for tables end
 div::-webkit-scrollbar {
   width: 0;
+} */
+
+.scrollbar-hidden::-webkit-scrollbar {
+  width: 0;
 }
+
 /* styles for scrollbar end*/
 
 /* styles for headings start*/

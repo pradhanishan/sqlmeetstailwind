@@ -86,10 +86,11 @@ export default function InnerJoin() {
             <h5>Source data</h5>
           </div>
           <div
-            className="flex flex-col justify-center items-start space-y-8 
-          sm:flex-row sm:space-y-0 sm:space-x-8 sm:justify-start"
+            className="flex flex-col sm:items-stretch space-y-8 
+          sm:flex-row sm:space-y-0 sm:space-x-8 justify-center"
           >
             <Table headers={pokemon.headers} data={filteredPokemonData} />
+
             <Table headers={pokemonTypes.headers} data={filteredPokemonTypes} />
           </div>
           <div>
@@ -120,7 +121,7 @@ export default function InnerJoin() {
           <div>
             <h5>Result</h5>
           </div>
-          <div>
+          <div className="flex sm:justify-center">
             <Table headers={pokemon.headers} data={filteredPokemonData} />
           </div>
           <div>
