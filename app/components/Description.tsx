@@ -19,7 +19,7 @@ export default function Description({
       rounded-lg
       text-slate-900
       dark:text-white
-      w-full lg:w-3/4 shadow-sm
+     shadow-sm
       shadow-gray-400 dark:shadow-sm dark:shadow-sky-400 overflow-y-scroll"
     >
       <p className=" ">{descriptionLines}</p>

@@ -6,10 +6,11 @@
 main {
   @apply bg-white;
   @apply dark:bg-gradient-to-br dark:from-slate-900 dark:to-sky-900;
-  @apply pt-24 px-4 sm:px-12  md:px-20;
+  @apply pt-24 px-8 sm:px-20  md:px-32 lg:px-48 xl:px-80;
   @apply flex flex-col flex-grow justify-start;
   @apply space-y-4;
   @apply min-w-[250px];
+  @apply pb-20;
 }
 /* styles for main end*/
 
@@ -21,19 +22,21 @@ td {
 
 th,
 td {
-  @apply px-1 py-3 sm:px-6 text-sm;
+  @apply px-2 py-3 sm:px-6 text-sm;
   @apply whitespace-nowrap;
 }
 
 th {
   @apply uppercase;
-  @apply bg-gray-400 dark:bg-slate-500;
+  @apply odd:bg-gray-600 dark:odd:bg-slate-700;
+  @apply even:bg-gray-500 dark:even:bg-slate-600;
   @apply text-slate-900 dark:text-white;
 }
 
 td {
   @apply lowercase;
-  @apply bg-gray-200 dark:bg-slate-800;
+  @apply even:bg-gray-300 dark:even:bg-slate-700;
+  @apply odd:bg-gray-200 dark:odd:bg-slate-800;
   @apply text-slate-800 dark:text-gray-400;
 }
 
@@ -45,12 +48,28 @@ div::-webkit-scrollbar {
 
 /* styles for headings start*/
 h3 {
-  @apply font-bold text-2xl lowercase;
+  @apply font-extrabold text-2xl;
   @apply text-slate-900 dark:text-white;
+  @apply pb-4;
 }
+
+h4 {
+  @apply font-bold text-xl;
+  @apply font-sans;
+  @apply text-slate-900 dark:text-white;
+  @apply pb-4;
+}
+
+h5 {
+  @apply text-lg lowercase font-mono font-bold;
+}
+
+/* styles for headings end */
 
 /* styles for headings end*/
 
 /*paragraph start*/
-
+p {
+  @apply text-sm text-slate-900 dark:text-white leading-7 indent-8;
+}
 /*paragraph end*/
