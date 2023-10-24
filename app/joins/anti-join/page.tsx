@@ -61,7 +61,7 @@ export default function AntiJoin() {
             <span className="font-bold text-gray-600 dark:text-sky-400">
               FROM
             </span>
-            <span className="italic"> table1 t1</span>
+            <span className="italic"> table1 t1 </span>
             <span className="font-bold text-gray-700 dark:text-sky-300">
               LEFT ANTI JOIN{" "}
             </span>

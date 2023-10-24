@@ -208,7 +208,7 @@ export default function CrossJoin() {
                 <tr>
                   <td>dragonair</td>
                   <td>
-                    <span className="bg-indigo-600  px-4 rounded-md py-1 ">
+                  <span className="bg-indigo-600  px-4 rounded-md py-1 text-white">
                       dragon
                     </span>
                   </td>
@@ -238,7 +238,7 @@ export default function CrossJoin() {
                 <tr>
                   <td>dragonair</td>
                   <td>
-                    <span className="bg-emerald-700  px-4 rounded-md py-1 ">
+                  <span className="bg-emerald-700  px-4 rounded-md py-1 text-slate-900">
                       bug
                     </span>
                   </td>
@@ -253,7 +253,7 @@ export default function CrossJoin() {
                 <tr>
                   <td>sylveon</td>
                   <td>
-                    <span className="bg-indigo-600  px-4 rounded-md py-1 ">
+                    <span className="bg-indigo-600  px-4 rounded-md py-1 text-white">
                       dragon
                     </span>
                   </td>
@@ -283,7 +283,7 @@ export default function CrossJoin() {
                 <tr>
                   <td>sylveon</td>
                   <td>
-                    <span className="bg-emerald-700  px-4 rounded-md py-1 ">
+                    <span className="bg-emerald-700  px-4 rounded-md py-1 text-slate-900">
                       bug
                     </span>
                   </td>
@@ -298,7 +298,7 @@ export default function CrossJoin() {
                 <tr>
                   <td>caterpie</td>
                   <td>
-                    <span className="bg-indigo-600  px-4 rounded-md py-1 text-slate-900">
+                    <span className="bg-indigo-600  px-4 rounded-md py-1 text-white">
                       dragon
                     </span>
                   </td>
