@@ -2,7 +2,6 @@ import Image from "next/image";
 import Table from "./components/Table";
 import ToggleThemeButton from "./components/ToggleThemeButton";
 
-import { pokemon } from "@/public/data/pokemon";
 
 export default function Home() {
   return (

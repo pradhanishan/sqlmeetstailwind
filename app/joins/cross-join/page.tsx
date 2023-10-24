@@ -3,7 +3,7 @@ import duskullSprite from "@/public/images/sprites/duskull.png";
 import umbreonSprite from "@/public/images/sprites/umbreon.png";
 import alakazamSprite from "@/public/images/sprites/alakazam.png";
 import Table from "@/app/components/Table";
-export default function RightJoin() {
+export default function CrossJoin() {
   return (
     <main>
       {/* Heading and synonym */}
@@ -29,19 +29,19 @@ export default function RightJoin() {
             second) table and the matching rows from the left (or first) table.
             If there are no matching rows in the left table, the result will
             still contain data from the right table, with null values for the
-            left table's columns. <br />
+            left table columns. <br />
             <br />
             In simpler terms, a right join returns a result set that preserves
             all records from the right table while incorporating related data
             from the left table when available, making it a useful tool for
             scenarios where you want to maintain the integrity of the right
-            table's data and include associated information from the left table.{" "}
+            table data and include associated information from the left table.{" "}
             <br />
             <br />
             This operation is commonly employed to analyze data relationships,
             track missing data, and create comprehensive reports that include
             all available information from the right table and any related data
-            from the left table. It's a valuable feature for data analysis and
+            from the left table. It a valuable feature for data analysis and
             reporting in relational database systems. <br />
           </p>
         </div>
