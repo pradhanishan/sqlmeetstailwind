@@ -21,27 +21,27 @@ export default function SemiJoin() {
       <section id="description-section">
         <div className="flex flex-col justify-center items-start">
           <p>
-            A semi join, in the context of relational databases and SQL
-            (Structured Query Language), is a query operation that combines data
-            from two or more tables based on a specified condition or common
-            column values. However, unlike other join types, a semi join does
-            not return all columns from the participating tables. Instead, it
-            produces a result set containing columns from one table (usually the
-            left table) while filtering rows based on matching values in the
-            other table (usually the right table). <br />
+            In the context of relational databases and SQL (Structured Query
+            Language), a semi join is a query operation that combines data from
+            two or more tables based on a specified condition or common column
+            values. However, it distinguishes itself from other join types as it
+            does not return all columns from the participating tables. Instead,
+            it yields a result set containing columns from one table (typically
+            the left table) while filtering rows based on matching values in the
+            other table (usually the right table).
             <br />
-            In simpler terms, a semi join focuses on the rows that have matching
-            values in the right table, ensuring that the result set only
-            includes data from the left table while discarding non-matching rows
-            from both tables. This operation is particularly useful for
-            scenarios where you want to filter and reduce data from the left
-            table based on conditions in the right table. <br />
+            <br /> In simpler terms, a semi join concentrates on rows that
+            possess matching values in the right table, ensuring that the result
+            set only contains data from the left table while eliminating
+            non-matching rows from both tables. This operation proves especially
+            valuable in situations where you need to filter and reduce data from
+            the left table based on conditions in the right table.
             <br />
-            The semi join is commonly employed for data filtering and
-            subsetting, allowing you to retrieve relevant records from the left
-            table based on the existence of related data in the right table. It
-            plays a pivotal role in various data analysis and query optimization
-            tasks within relational database systems. <br />
+            <br /> The semi join finds frequent application in data filtering
+            and subsetting, enabling the retrieval of pertinent records from the
+            left table according to the presence of related data in the right
+            table. It plays a pivotal role in a multitude of data analysis and
+            query optimization tasks within relational database systems.
           </p>
         </div>
       </section>
@@ -50,12 +50,12 @@ export default function SemiJoin() {
         <div className="flex flex-col justify-center items-start">
           <h4>Syntax</h4>
           <p className="font-mono">
-            <span className="font-bold text-gray-600 dark:text-sky-400">
+            <span className="font-bold text-orange-500 dark:text-sky-400">
               SELECT{" "}
             </span>
             <span className="italic">column1, column2, ...</span>
             <br />
-            <span className="font-bold text-gray-600 dark:text-sky-400">
+            <span className="font-bold text-orange-500 dark:text-sky-400">
               FROM
             </span>
             <span className="italic"> table1 t1 </span>
@@ -84,7 +84,7 @@ export default function SemiJoin() {
             </p>
           </div>
           <div>
-            <h5>Source data</h5>
+            <h5>data</h5>
           </div>
           <div
             className="flex flex-col sm:items-stretch space-y-8 
@@ -172,12 +172,12 @@ export default function SemiJoin() {
           </div>
           <div>
             <p className="font-mono">
-              <span className="font-bold text-gray-600 dark:text-sky-400">
+              <span className="font-bold text-orange-500 dark:text-sky-400">
                 SELECT{" "}
               </span>
               <span className="italic">p.name, p.sprite</span>
               <br />
-              <span className="font-bold text-gray-600 dark:text-sky-400">
+              <span className="font-bold text-orange-500 dark:text-sky-400">
                 FROM
               </span>
               <span className="italic"> pokemon as p </span>
@@ -186,7 +186,7 @@ export default function SemiJoin() {
               </span>
               <span className="italic">pokemonType as t</span>
               <br />{" "}
-              <span className="font-bold text-gray-600 dark:text-sky-400">
+              <span className="font-bold text-orange-500 dark:text-sky-400">
                 ON{" "}
               </span>
               p.typeId = t.id;

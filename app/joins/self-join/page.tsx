@@ -28,22 +28,23 @@ export default function SelfJoin() {
       <section id="description-section">
         <div className="flex flex-col justify-center items-start">
           <p>
-            A self-join, in the realm of relational databases and SQL
-            (Structured Query Language), is an operation that involves joining a
-            table with itself based on a specified condition or common column
-            values. <br />
-            <br /> This technique is often used when dealing with hierarchical
-            or recursive data structures, such as organizational charts or
-            product categories. By performing a self-join, it becomes possible
-            to establish relationships and retrieve related data within the same
-            dataset.
+            In the domain of relational databases and SQL (Structured Query
+            Language), a self-join is an operation that involves joining a table
+            with itself based on a specified condition or common column values.
             <br />
-            <br /> This can be particularly useful in scenarios where you need
-            to navigate parent-child relationships or other forms of data
-            associations that exist within a single table.
+            <br /> This technique finds significant application when working
+            with hierarchical or recursive data structures, like organizational
+            charts or product categories. Through a self-join, it becomes
+            feasible to establish connections and extract associated data within
+            the same dataset.
             <br />
-            <br /> Self-joins are a powerful tool for querying and analyzing
-            hierarchical data structures in relational database systems.
+            <br /> This proves particularly advantageous in situations where you
+            need to navigate relationships like parent-child hierarchies or
+            other forms of data associations present within a single table.
+            <br />
+            <br /> Self-joins serve as a potent tool for querying and
+            scrutinizing hierarchical data structures in relational database
+            systems.
           </p>
         </div>
       </section>
@@ -69,7 +70,7 @@ export default function SelfJoin() {
             </p>
           </div>
           <div>
-            <h5>Source data</h5>
+            <h5>data</h5>
           </div>
           <div
             className="flex flex-col sm:items-stretch space-y-8 
@@ -204,7 +205,7 @@ export default function SelfJoin() {
           </div>
           <div>
             <p className="font-mono">
-              <span className="font-bold text-gray-600 dark:text-sky-400">
+              <span className="font-bold text-orange-500 dark:text-sky-400">
                 SELECT{" "}
               </span>
               <span className="italic">
@@ -219,7 +220,7 @@ export default function SelfJoin() {
                 p3.name AS final, p3.sprite as final_sprite
               </span>
               <br />
-              <span className="font-bold text-gray-600 dark:text-sky-400">
+              <span className="font-bold text-orange-500 dark:text-sky-400">
                 FROM
               </span>
               <span className="italic"> pokemon p1 </span>
@@ -233,7 +234,7 @@ export default function SelfJoin() {
               </span>
               <span className="italic">pokemon p3 ON p2.id = p3.parent_id</span>
               <br />{" "}
-              <span className="font-bold text-gray-600 dark:text-sky-400">
+              <span className="font-bold text-orange-500 dark:text-sky-400">
                 WHERE p1.parent_id IS NULL
               </span>
               ORDER BY p1.id;

@@ -1,23 +1,41 @@
-import Image from "next/image";
-import Table from "./components/Table";
-import ToggleThemeButton from "./components/ToggleThemeButton";
-
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main>
-      {/* <Table data={pokemon.data} headers={pokemon.headers} /> */}
-      {/* <ToggleThemeButton /> */}
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, commodi
-      ex odit modi eos error vel et quos, nam odio dolore repellat consequuntur
-      quod. Ab voluptas nam molestiae ipsam magnam aut accusantium impedit illo
-      natus saepe tempora officia, optio, tenetur commodi dolores neque ea
-      itaque. Vero dolores repudiandae ducimus, ea, autem voluptatem magnam unde
-      doloremque voluptate, qui repellat! Et inventore magni eos commodi! Ad
-      debitis sequi rem itaque ab magni consectetur sunt. Dignissimos unde,
-      consequatur vero vitae possimus, quam quas excepturi dicta non magni
-      officia eligendi ipsam! Minima atque molestias temporibus magnam velit
-      dolorum dolore ab, provident perferendis, corporis harum.
+      <div className="flex justify-center items-center flex-col space-y-8">
+        <p className="sm:pt-20">
+          Welcome to SQL Joins Simplified, where we are going to embark on a
+          Pokémon-filled adventure through the world of SQL joins! <br />
+          <br />
+          Are you ready to join us as we journey through the captivating realm
+          of SQL joins, all while diving into the exciting world of Pokémon? We
+          will explore different types of SQL joins and discover the art of
+          crafting join queries using Pokémon data, making your learning
+          experience as thrilling as a Pokémon battle! <br />
+          <br />
+          Whether you are a Poké-newbie looking to grasp the basics or a
+          seasoned SQL pro aiming to refine your skills, this comprehensive
+          guide will be your trusty PokéDex. By the end of this adventure, you
+          will have the knowledge and skills to navigate the world of SQL joins
+          like a Pokémon Master! Let us catch em all—SQL joins and Pokémon
+          knowledge! <br />
+          <br />
+        </p>
+        <Link href="/joins">
+          <div
+            className="px-8 py-6 rounded-md text-2xl
+         shadow-gray-400 shadow-md dark:shadow-md dark:shadow-sky-700
+         bg-gradient-to-r from-gray-200 to-gray-100 text-slate-900
+         dark:bg-gradient-to-br dark:to-slate-700 dark:from-sky-800 dark:text-gray-400
+         hover:scale-105 focus:scale-105 transition-all duration-300
+         hover:font-bold focus:font-bold lowercase hover:animate-pulse focus:animate-pulse
+         "
+          >
+            Start
+          </div>
+        </Link>
+      </div>
     </main>
   );
 }

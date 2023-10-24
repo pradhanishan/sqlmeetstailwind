@@ -18,7 +18,9 @@ export default function Header() {
       {/* heading container */}
       <Heading />
       {/* toggle theme button */}
-      <ToggleThemeButton />
+      <div>
+        <ToggleThemeButton />
+      </div>
     </div>
   );
 }
