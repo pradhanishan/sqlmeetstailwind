@@ -3,7 +3,7 @@ import duskullSprite from "@/public/images/sprites/duskull.png";
 import umbreonSprite from "@/public/images/sprites/umbreon.png";
 import alakazamSprite from "@/public/images/sprites/alakazam.png";
 import Table from "@/app/components/Table";
-export default function RightJoin() {
+export default function SemiJoin() {
   return (
     <main>
       {/* Heading and synonym */}

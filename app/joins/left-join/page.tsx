@@ -5,7 +5,7 @@ import arbokSprite from "@/public/images/sprites/arbok.png";
 import charmeleonSprite from "@/public/images/sprites/charmeleon.png";
 import eeveeSprite from "@/public/images/sprites/eevee.png";
 import Table from "@/app/components/Table";
-export default function InnerJoin() {
+export default function LeftJoin() {
   return (
     <main>
       {/* Heading and synonym */}
