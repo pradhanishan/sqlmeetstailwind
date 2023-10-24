@@ -1,7 +1,22 @@
 import Image from "next/image";
-import duskullSprite from "@/public/images/sprites/duskull.png";
-import umbreonSprite from "@/public/images/sprites/umbreon.png";
+import aggronSprite from "@/public/images/sprites/aggron.png";
 import alakazamSprite from "@/public/images/sprites/alakazam.png";
+import arbokSprite from "@/public/images/sprites/arbok.png";
+import caterpieSprite from "@/public/images/sprites/caterpie.png";
+import corvisquireSprite from "@/public/images/sprites/corvisquire.png";
+import cranidosSprite from "@/public/images/sprites/cranidos.png";
+import dragonairSprite from "@/public/images/sprites/dragonair.png";
+import duskullSprite from "@/public/images/sprites/duskull.png";
+import eeveeSprite from "@/public/images/sprites/eevee.png";
+import glaceonSprite from "@/public/images/sprites/glaceon.png";
+import hippowdonSprite from "@/public/images/sprites/hippowdon.png";
+import jolteonSprite from "@/public/images/sprites/jolteon.png";
+import rioluSprite from "@/public/images/sprites/riolu.png";
+import sylveonSprite from "@/public/images/sprites/sylveon.png";
+import treeckoSprite from "@/public/images/sprites/treecko.png";
+import umbreonSprite from "@/public/images/sprites/umbreon.png";
+import vaporeonSprite from "@/public/images/sprites/vaporeon.png";
+import charmeleonSprite from "@/public/images/sprites/charmeleon.png";
 import Table from "@/app/components/Table";
 export default function NaturalJoin() {
   return (
@@ -9,9 +24,9 @@ export default function NaturalJoin() {
       {/* Heading and synonym */}
       <section id="header-section">
         <div className="flex flex-col justify-center items-start">
-          <h3>Right join</h3>
+          <h3>Natural join</h3>
           <span className="text-sm text-gray-500 dark:text-sky-400">
-            (right outer join)
+            (implicit join, simple join)
           </span>
         </div>
       </section>
@@ -19,30 +34,29 @@ export default function NaturalJoin() {
       <section id="description-section">
         <div className="flex flex-col justify-center items-start">
           <p>
-            A right join, within the realm of relational databases and SQL
+            A natural join, within the realm of relational databases and SQL
             (Structured Query Language), is a query operation that combines data
-            from two or more tables based on a specified condition or common
-            column values. <br />
+            from two or more tables based on columns with matching names. <br />
             <br />
-            Unlike an inner join, which only retrieves rows with matching values
-            in both tables, a right join includes all rows from the right (or
-            second) table and the matching rows from the left (or first) table.
-            If there are no matching rows in the left table, the result will
-            still contain data from the right table, with null values for the
-            left table columns. <br />
+            Unlike other join types that require you to specify the join
+            condition explicitly, a natural join identifies and joins rows from
+            the participating tables by automatically matching columns with the
+            same names. It effectively simplifies the join process by leveraging
+            the common column names, making it a convenient tool for combining
+            related data. <br />
             <br />
-            In simpler terms, a right join returns a result set that preserves
-            all records from the right table while incorporating related data
-            from the left table when available, making it a useful tool for
-            scenarios where you want to maintain the integrity of the right
-            table data and include associated information from the left table.{" "}
+            In simpler terms, a natural join returns a result set that includes
+            rows from both tables where column names align, seamlessly merging
+            data without the need for explicit join conditions. This operation
+            is commonly employed when you want to bring together data from
+            different tables that share column names, streamlining the join
+            process for improved readability and efficiency. <br />
             <br />
-            <br />
-            This operation is commonly employed to analyze data relationships,
-            track missing data, and create comprehensive reports that include
-            all available information from the right table and any related data
-            from the left table. It a valuable feature for data analysis and
-            reporting in relational database systems. <br />
+            The natural join is particularly useful for scenarios where you need
+            to combine data from related tables with shared column names,
+            reducing the complexity of query writing while ensuring data
+            consistency. It iss a valuable feature for data retrieval and
+            analysis in relational database systems. <br />
           </p>
         </div>
       </section>
@@ -54,21 +68,17 @@ export default function NaturalJoin() {
             <span className="font-bold text-gray-600 dark:text-sky-400">
               SELECT{" "}
             </span>
-            <span className="italic">column1, column2, ...</span>
+            <span className="italic">t1column1, t2column1, ...</span>
             <br />
             <span className="font-bold text-gray-600 dark:text-sky-400">
               FROM
             </span>
-            <span className="italic"> table1 </span>
+            <span className="italic"> table1 as t1</span>
             <span className="font-bold text-gray-700 dark:text-sky-300">
-              RIGHT JOIN{" "}
+              NATURAL JOIN
             </span>
-            <span className="italic">table2</span>
+            <span className="italic">table2 as t2</span>
             <br />{" "}
-            <span className="font-bold text-gray-600 dark:text-sky-400">
-              ON{" "}
-            </span>
-            table1.column_name = table2.column_name;
           </p>
         </div>
       </section>
@@ -78,10 +88,10 @@ export default function NaturalJoin() {
           <div>
             <h4>Example</h4>
             <p>
-              In this example, we will perform a right join between left table
+              In this example, we will perform a natural join between left table
               pokemon and right table pokemonTypes to display the pokemon name
-              with its type by joining pokemon.typeId column with pokemonType.id
-              column.
+              with its type. For this example, we will assume both tables have a
+              column name typeId
             </p>
           </div>
           <div>
@@ -104,8 +114,84 @@ export default function NaturalJoin() {
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td>duskull</td>
+                  <td>aggron</td>
                   <td>type1</td>
+                  <td>
+                    <Image src={aggronSprite} alt="aggron-sprite" width={50} />
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>alakazam</td>
+                  <td>type2</td>
+                  <td>
+                    <Image
+                      src={alakazamSprite}
+                      alt="alakazam-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>arbok</td>
+                  <td>type3</td>
+                  <td>
+                    <Image src={arbokSprite} alt="arbok-sprite" width={50} />
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>caterpie</td>
+                  <td>type4</td>
+                  <td>
+                    <Image
+                      src={caterpieSprite}
+                      alt="caterpie-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>corvisquire</td>
+                  <td>type5</td>
+                  <td>
+                    <Image
+                      src={corvisquireSprite}
+                      alt="corvisquire-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>cranidos</td>
+                  <td>type6</td>
+                  <td>
+                    <Image
+                      src={cranidosSprite}
+                      alt="cranidos-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>dragonair</td>
+                  <td>type7</td>
+                  <td>
+                    <Image
+                      src={dragonairSprite}
+                      alt="dragonair-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>duskull</td>
+                  <td>type8</td>
                   <td>
                     <Image
                       src={duskullSprite}
@@ -115,9 +201,85 @@ export default function NaturalJoin() {
                   </td>
                 </tr>
                 <tr>
-                  <td>2</td>
+                  <td>9</td>
+                  <td>eevee</td>
+                  <td>type9</td>
+                  <td>
+                    <Image src={eeveeSprite} alt="eevee-sprite" width={50} />
+                  </td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>glaceon</td>
+                  <td>type10</td>
+                  <td>
+                    <Image
+                      src={glaceonSprite}
+                      alt="glaceon-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>hippowdon</td>
+                  <td>type11</td>
+                  <td>
+                    <Image
+                      src={hippowdonSprite}
+                      alt="hippowdon-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>jolteon</td>
+                  <td>type12</td>
+                  <td>
+                    <Image
+                      src={jolteonSprite}
+                      alt="jolteon-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>riolu</td>
+                  <td>type13</td>
+                  <td>
+                    <Image src={rioluSprite} alt="riolu-sprite" width={50} />
+                  </td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td>sylveon</td>
+                  <td>type14</td>
+                  <td>
+                    <Image
+                      src={sylveonSprite}
+                      alt="sylveon-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td>treecko</td>
+                  <td>type15</td>
+                  <td>
+                    <Image
+                      src={treeckoSprite}
+                      alt="treecko-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>16</td>
                   <td>umbreon</td>
-                  <td>type2</td>
+                  <td>type16</td>
                   <td>
                     <Image
                       src={umbreonSprite}
@@ -127,13 +289,25 @@ export default function NaturalJoin() {
                   </td>
                 </tr>
                 <tr>
-                  <td>3</td>
-                  <td>alakazam</td>
-                  <td>type3</td>
+                  <td>17</td>
+                  <td>vaporeon</td>
+                  <td>type17</td>
                   <td>
                     <Image
-                      src={alakazamSprite}
-                      alt="alakazam-sprite"
+                      src={vaporeonSprite}
+                      alt="vaporeon-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td>charmeleon</td>
+                  <td>type18</td>
+                  <td>
+                    <Image
+                      src={charmeleonSprite}
+                      alt="charmeleon-sprite"
                       width={50}
                     />
                   </td>
@@ -144,7 +318,7 @@ export default function NaturalJoin() {
             <Table>
               <thead>
                 <tr>
-                  <th>id</th>
+                  <th>typeId</th>
                   <th>type</th>
                 </tr>
               </thead>
@@ -153,20 +327,12 @@ export default function NaturalJoin() {
                   <td>type1</td>
                   <td>
                     <span className="bg-zinc-700  px-4 rounded-md py-1 text-white">
-                      ghost
+                      steel
                     </span>
                   </td>
                 </tr>
                 <tr>
                   <td>type2</td>
-                  <td>
-                    <span className="bg-black  px-4 rounded-md py-1 text-white">
-                      dark
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>type3</td>
                   <td>
                     <span className="bg-rose-300  px-4 rounded-md py-1 text-slate-900">
                       psychic
@@ -174,7 +340,81 @@ export default function NaturalJoin() {
                   </td>
                 </tr>
                 <tr>
+                  <td>type3</td>
+                  <td>
+                    {" "}
+                    <span className="bg-purple-300  px-4 rounded-md py-1 text-slate-900">
+                      purple
+                    </span>
+                  </td>
+                </tr>
+                <tr>
                   <td>type4</td>
+                  <td>
+                    {" "}
+                    <span className="bg-emerald-700  px-4 rounded-md py-1 text-slate-900">
+                      psychic
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>type5</td>
+                  <td>
+                    <span className="bg-slate-200  px-4 rounded-md py-1 text-slate-900">
+                      flying
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>type6</td>
+                  <td>
+                    <span className="bg-gray-600  px-4 rounded-md py-1 text-white">
+                      rock
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>type7</td>
+                  <td>
+                    <span className="bg-indigo-600  px-4 rounded-md py-1 text-white">
+                      dragon
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>type8</td>
+                  <td>
+                    <span className="bg-zinc-700  px-4 rounded-md py-1 text-white">
+                      ghost
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>type9</td>
+                  <td>
+                    <span className="bg-orange-500  px-4 rounded-md py-1 text-slate-900">
+                      flying
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>type10</td>
+                  <td>
+                    <span className="bg-white  px-4 rounded-md py-1 text-slate-900">
+                      ice
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>type11</td>
+                  <td>
+                    <span className="bg-stone-700  px-4 rounded-md py-1 text-white">
+                      ground
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>type12</td>
                   <td>
                     <span className="bg-yellow-300  px-4 rounded-md py-1 text-slate-900">
                       electric
@@ -182,10 +422,50 @@ export default function NaturalJoin() {
                   </td>
                 </tr>
                 <tr>
-                  <td>type5</td>
+                  <td>type13</td>
+                  <td>
+                    <span className="bg-orange-800  px-4 rounded-md py-1 text-white">
+                      fighting
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>type14</td>
+                  <td>
+                    <span className="bg-pink-300  px-4 rounded-md py-1 text-slate-900">
+                      fairy
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>type15</td>
+                  <td>
+                    <span className="bg-green-300  px-4 rounded-md py-1 text-slate-900">
+                      grass
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>type16</td>
+                  <td>
+                    <span className="bg-black  px-4 rounded-md py-1 text-white">
+                      dark
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>type17</td>
                   <td>
                     <span className="bg-blue-300  px-4 rounded-md py-1 text-slate-900">
                       water
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>type18</td>
+                  <td>
+                    <span className="bg-red-300  px-4 rounded-md py-1 text-slate-900">
+                      fire
                     </span>
                   </td>
                 </tr>
@@ -231,9 +511,106 @@ export default function NaturalJoin() {
               </thead>
               <tbody>
                 <tr>
+                  <td>aggron</td>
+                  <td>
+                    <span className="bg-zinc-700 px-4 rounded-md py-1 text-white">
+                      steel
+                    </span>
+                  </td>
+                  <td>
+                    <Image src={aggronSprite} alt="aggron-sprite" width={50} />
+                  </td>
+                </tr>
+                <tr>
+                  <td>alakazam</td>
+                  <td>
+                    <span className="bg-rose-300 px-4 rounded-md py-1 text-slate-900">
+                      psychic
+                    </span>
+                  </td>
+                  <td>
+                    <Image
+                      src={alakazamSprite}
+                      alt="alakazam-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>arbok</td>
+                  <td>
+                    <span className="bg-purple-300 px-4 rounded-md py-1 text-slate-900">
+                      purple
+                    </span>
+                  </td>
+                  <td>
+                    <Image src={arbokSprite} alt="arbok-sprite" width={50} />
+                  </td>
+                </tr>
+                <tr>
+                  <td>caterpie</td>
+                  <td>
+                    <span className="bg-emerald-700 px-4 rounded-md py-1 text-slate-900">
+                      psychic
+                    </span>
+                  </td>
+                  <td>
+                    <Image
+                      src={caterpieSprite}
+                      alt="caterpie-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>corvisquire</td>
+                  <td>
+                    <span className="bg-slate-200 px-4 rounded-md py-1 text-slate-900">
+                      flying
+                    </span>
+                  </td>
+                  <td>
+                    <Image
+                      src={corvisquireSprite}
+                      alt="corvisquire-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>cranidos</td>
+                  <td>
+                    <span className="bg-gray-600 px-4 rounded-md py-1 text-white">
+                      rock
+                    </span>
+                  </td>
+                  <td>
+                    <Image
+                      src={cranidosSprite}
+                      alt="cranidos-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>dragonair</td>
+                  <td>
+                    <span className="bg-indigo-600 px-4 rounded-md py-1 text-white">
+                      dragon
+                    </span>
+                  </td>
+                  <td>
+                    <Image
+                      src={dragonairSprite}
+                      alt="dragonair-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
                   <td>duskull</td>
                   <td>
-                    <span className="bg-zinc-700  px-4 rounded-md py-1 text-white">
+                    <span className="bg-zinc-700 px-4 rounded-md py-1 text-white">
                       ghost
                     </span>
                   </td>
@@ -246,67 +623,145 @@ export default function NaturalJoin() {
                   </td>
                 </tr>
                 <tr>
+                  <td>eevee</td>
+                  <td>
+                    <span className="bg-orange-500 px-4 rounded-md py-1 text-slate-900">
+                      flying
+                    </span>
+                  </td>
+                  <td>
+                    <Image src={eeveeSprite} alt="eevee-sprite" width={50} />
+                  </td>
+                </tr>
+                <tr>
+                  <td>glaceon</td>
+                  <td>
+                    <span className="bg-white px-4 rounded-md py-1 text-slate-900">
+                      ice
+                    </span>
+                  </td>
+                  <td>
+                    <Image
+                      src={glaceonSprite}
+                      alt="glaceon-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>hippowdon</td>
+                  <td>
+                    <span className="bg-stone-700 px-4 rounded-md py-1 text-white">
+                      ground
+                    </span>
+                  </td>
+                  <td>
+                    <Image
+                      src={hippowdonSprite}
+                      alt="hippowdon-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>jolteon</td>
+                  <td>
+                    <span className="bg-yellow-300 px-4 rounded-md py-1 text-slate-900">
+                      electric
+                    </span>
+                  </td>
+                  <td>
+                    <Image
+                      src={jolteonSprite}
+                      alt="jolteon-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>riolu</td>
+                  <td>
+                    <span className="bg-orange-800 px-4 rounded-md py-1 text-white">
+                      fighting
+                    </span>
+                  </td>
+                  <td>
+                    <Image src={rioluSprite} alt="riolu-sprite" width={50} />
+                  </td>
+                </tr>
+                <tr>
+                  <td>sylveon</td>
+                  <td>
+                    <span className="bg-pink-300 px-4 rounded-md py-1 text-slate-900">
+                      fairy
+                    </span>
+                  </td>
+                  <td>
+                    <Image
+                      src={sylveonSprite}
+                      alt="sylveon-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>treecko</td>
+                  <td>
+                    <span className="bg-green-300 px-4 rounded-md py-1 text-slate-900">
+                      grass
+                    </span>
+                  </td>
+                  <td>
+                    <Image
+                      src={treeckoSprite}
+                      alt="treecko-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
                   <td>umbreon</td>
                   <td>
-                    <span className="bg-black  px-4 rounded-md py-1 text-white">
+                    <span className="bg-black px-4 rounded-md py-1 text-white">
                       dark
                     </span>
                   </td>
                   <td>
                     <Image
                       src={umbreonSprite}
-                      alt="duskull-sprite"
+                      alt="umbreon-sprite"
                       width={50}
                     />
                   </td>
                 </tr>
                 <tr>
-                  <td>alakazam</td>
+                  <td>vaporeon</td>
                   <td>
-                    <span className="bg-rose-300  px-4 rounded-md py-1 text-slate-900">
-                      psychic
-                    </span>
-                  </td>
-                  <td>
-                    <Image
-                      src={alakazamSprite}
-                      alt="duskull-sprite"
-                      width={50}
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
-                      null
-                    </span>
-                  </td>
-                  <td>
-                    <span className="bg-yellow-300  px-4 rounded-md py-1 text-slate-900">
-                      electric
-                    </span>
-                  </td>
-                  <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
-                      null
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
-                      null
-                    </span>
-                  </td>
-                  <td>
-                    <span className="bg-blue-300  px-4 rounded-md py-1 text-slate-900">
+                    <span className="bg-blue-300 px-4 rounded-md py-1 text-slate-900">
                       water
                     </span>
                   </td>
                   <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
-                      null
+                    <Image
+                      src={vaporeonSprite}
+                      alt="vaporeon-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>charmeleon</td>
+                  <td>
+                    <span className="bg-red-300 px-4 rounded-md py-1 text-slate-900">
+                      fire
                     </span>
+                  </td>
+                  <td>
+                    <Image
+                      src={charmeleonSprite}
+                      alt="charmeleon-sprite"
+                      width={50}
+                    />
                   </td>
                 </tr>
               </tbody>
@@ -314,10 +769,11 @@ export default function NaturalJoin() {
           </div>
           <div>
             <p>
-              Here all types from right tables are returned in the result. But
-              from the left table, only matching pokemon duskull, umbreon and
-              alakazam are returned whereas for types electric and water, their
-              pokemon will be null as no matching records are found
+              Here all matching rows were returned without any join condition
+              specified between the tables because an automatic join was
+              performed using column typeId. However, it is important to note
+              that such joins are unpredictable and difficult to sustain and
+              hence avoided in production.
             </p>
           </div>
         </div>

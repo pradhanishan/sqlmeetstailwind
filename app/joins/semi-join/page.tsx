@@ -1,7 +1,8 @@
 import Image from "next/image";
-import duskullSprite from "@/public/images/sprites/duskull.png";
-import umbreonSprite from "@/public/images/sprites/umbreon.png";
-import alakazamSprite from "@/public/images/sprites/alakazam.png";
+import eeveeSprite from "@/public/images/sprites/eevee.png";
+import corvisquireSprite from "@/public/images/sprites/corvisquire.png";
+import arbokSprite from "@/public/images/sprites/arbok.png";
+import jolteonSprite from "@/public/images/sprites/jolteon.png";
 import Table from "@/app/components/Table";
 // normal, flying, fighting, poison, electric
 export default function SemiJoin() {
@@ -10,9 +11,9 @@ export default function SemiJoin() {
       {/* Heading and synonym */}
       <section id="header-section">
         <div className="flex flex-col justify-center items-start">
-          <h3>Right join</h3>
+          <h3>Semi join</h3>
           <span className="text-sm text-gray-500 dark:text-sky-400">
-            (right outer join)
+            (left semi join)
           </span>
         </div>
       </section>
@@ -20,30 +21,27 @@ export default function SemiJoin() {
       <section id="description-section">
         <div className="flex flex-col justify-center items-start">
           <p>
-            A right join, within the realm of relational databases and SQL
+            A semi join, in the context of relational databases and SQL
             (Structured Query Language), is a query operation that combines data
             from two or more tables based on a specified condition or common
-            column values. <br />
+            column values. However, unlike other join types, a semi join does
+            not return all columns from the participating tables. Instead, it
+            produces a result set containing columns from one table (usually the
+            left table) while filtering rows based on matching values in the
+            other table (usually the right table). <br />
             <br />
-            Unlike an inner join, which only retrieves rows with matching values
-            in both tables, a right join includes all rows from the right (or
-            second) table and the matching rows from the left (or first) table.
-            If there are no matching rows in the left table, the result will
-            still contain data from the right table, with null values for the
-            left table columns. <br />
+            In simpler terms, a semi join focuses on the rows that have matching
+            values in the right table, ensuring that the result set only
+            includes data from the left table while discarding non-matching rows
+            from both tables. This operation is particularly useful for
+            scenarios where you want to filter and reduce data from the left
+            table based on conditions in the right table. <br />
             <br />
-            In simpler terms, a right join returns a result set that preserves
-            all records from the right table while incorporating related data
-            from the left table when available, making it a useful tool for
-            scenarios where you want to maintain the integrity of the right
-            table data and include associated information from the left table.{" "}
-            <br />
-            <br />
-            This operation is commonly employed to analyze data relationships,
-            track missing data, and create comprehensive reports that include
-            all available information from the right table and any related data
-            from the left table. It a valuable feature for data analysis and
-            reporting in relational database systems. <br />
+            The semi join is commonly employed for data filtering and
+            subsetting, allowing you to retrieve relevant records from the left
+            table based on the existence of related data in the right table. It
+            plays a pivotal role in various data analysis and query optimization
+            tasks within relational database systems. <br />
           </p>
         </div>
       </section>
@@ -60,16 +58,17 @@ export default function SemiJoin() {
             <span className="font-bold text-gray-600 dark:text-sky-400">
               FROM
             </span>
-            <span className="italic"> table1 </span>
+            <span className="italic"> table1 t1 </span>
             <span className="font-bold text-gray-700 dark:text-sky-300">
-              RIGHT JOIN{" "}
+              LEFT SEMI JOIN{" "}
             </span>
-            <span className="italic">table2</span>
-            <br />{" "}
-            <span className="font-bold text-gray-600 dark:text-sky-400">
+            <span className="italic"> table2 t2 </span>
+            <br />
+            <span className="font-bold text-gray-700 dark:text-sky-300">
               ON{" "}
             </span>
-            table1.column_name = table2.column_name;
+            <br />
+            <span className="italic">t1.column_name = t2.column_name</span>
           </p>
         </div>
       </section>
@@ -79,10 +78,9 @@ export default function SemiJoin() {
           <div>
             <h4>Example</h4>
             <p>
-              In this example, we will perform a right join between left table
-              pokemon and right table pokemonTypes to display the pokemon name
-              with its type by joining pokemon.typeId column with pokemonType.id
-              column.
+              In this example, we will perform a semi between left table pokemon
+              and right table pokemonTypes to display the pokemon name with its
+              type by joining pokemon.typeId column with pokemonType.id column.
             </p>
           </div>
           <div>
@@ -105,38 +103,38 @@ export default function SemiJoin() {
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td>duskull</td>
+                  <td>eevee</td>
                   <td>type1</td>
                   <td>
-                    <Image
-                      src={duskullSprite}
-                      alt="duskull-sprite"
-                      width={50}
-                    />
+                    <Image src={eeveeSprite} alt="eevee-sprite" width={50} />
                   </td>
                 </tr>
                 <tr>
                   <td>2</td>
-                  <td>umbreon</td>
+                  <td>corvisquire</td>
                   <td>type2</td>
                   <td>
                     <Image
-                      src={umbreonSprite}
-                      alt="umbreon-sprite"
+                      src={corvisquireSprite}
+                      alt="corvisquire-sprite"
                       width={50}
                     />
                   </td>
                 </tr>
                 <tr>
                   <td>3</td>
-                  <td>alakazam</td>
+                  <td>arbok</td>
                   <td>type3</td>
                   <td>
-                    <Image
-                      src={alakazamSprite}
-                      alt="alakazam-sprite"
-                      width={50}
-                    />
+                    <Image src={arbokSprite} alt="arbok-sprite" width={50} />
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>jolteon</td>
+                  <td>type4</td>
+                  <td>
+                    <Image src={jolteonSprite} alt="arbok-sprite" width={50} />
                   </td>
                 </tr>
               </tbody>
@@ -153,40 +151,16 @@ export default function SemiJoin() {
                 <tr>
                   <td>type1</td>
                   <td>
-                    <span className="bg-zinc-700  px-4 rounded-md py-1 text-white">
-                      ghost
+                    <span className="bg-orange-500  px-4 rounded-md py-1 text-slate-900">
+                      normal
                     </span>
                   </td>
                 </tr>
                 <tr>
                   <td>type2</td>
                   <td>
-                    <span className="bg-black  px-4 rounded-md py-1 text-white">
-                      dark
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>type3</td>
-                  <td>
-                    <span className="bg-rose-300  px-4 rounded-md py-1 text-slate-900">
-                      psychic
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>type4</td>
-                  <td>
-                    <span className="bg-yellow-300  px-4 rounded-md py-1 text-slate-900">
-                      electric
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>type5</td>
-                  <td>
-                    <span className="bg-blue-300  px-4 rounded-md py-1 text-slate-900">
-                      water
+                    <span className="bg-slate-200  px-4 rounded-md py-1 text-slate-900">
+                      flying
                     </span>
                   </td>
                 </tr>
@@ -201,14 +175,14 @@ export default function SemiJoin() {
               <span className="font-bold text-gray-600 dark:text-sky-400">
                 SELECT{" "}
               </span>
-              <span className="italic">p.name, t.type, p.sprite</span>
+              <span className="italic">p.name, p.sprite</span>
               <br />
               <span className="font-bold text-gray-600 dark:text-sky-400">
                 FROM
               </span>
               <span className="italic"> pokemon as p </span>
               <span className="font-bold text-gray-700 dark:text-sky-300">
-                RIGHT JOIN{" "}
+                LEFT SEMI JOIN{" "}
               </span>
               <span className="italic">pokemonType as t</span>
               <br />{" "}
@@ -226,88 +200,26 @@ export default function SemiJoin() {
               <thead>
                 <tr>
                   <th>name</th>
-                  <th>type</th>
                   <th>sprite</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>duskull</td>
+                  <td>eevee</td>
+
                   <td>
-                    <span className="bg-zinc-700  px-4 rounded-md py-1 text-white">
-                      ghost
-                    </span>
+                    <Image src={eeveeSprite} alt="eevee-sprite" width={50} />
                   </td>
+                </tr>
+                <tr>
+                  <td>corvisquire</td>
+
                   <td>
                     <Image
-                      src={duskullSprite}
-                      alt="duskull-sprite"
+                      src={corvisquireSprite}
+                      alt="eevee-sprite"
                       width={50}
                     />
-                  </td>
-                </tr>
-                <tr>
-                  <td>umbreon</td>
-                  <td>
-                    <span className="bg-black  px-4 rounded-md py-1 text-white">
-                      dark
-                    </span>
-                  </td>
-                  <td>
-                    <Image
-                      src={umbreonSprite}
-                      alt="duskull-sprite"
-                      width={50}
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>alakazam</td>
-                  <td>
-                    <span className="bg-rose-300  px-4 rounded-md py-1 text-slate-900">
-                      psychic
-                    </span>
-                  </td>
-                  <td>
-                    <Image
-                      src={alakazamSprite}
-                      alt="duskull-sprite"
-                      width={50}
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
-                      null
-                    </span>
-                  </td>
-                  <td>
-                    <span className="bg-yellow-300  px-4 rounded-md py-1 text-slate-900">
-                      electric
-                    </span>
-                  </td>
-                  <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
-                      null
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
-                      null
-                    </span>
-                  </td>
-                  <td>
-                    <span className="bg-blue-300  px-4 rounded-md py-1 text-slate-900">
-                      water
-                    </span>
-                  </td>
-                  <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
-                      null
-                    </span>
                   </td>
                 </tr>
               </tbody>
@@ -315,10 +227,9 @@ export default function SemiJoin() {
           </div>
           <div>
             <p>
-              Here all types from right tables are returned in the result. But
-              from the left table, only matching pokemon duskull, umbreon and
-              alakazam are returned whereas for types electric and water, their
-              pokemon will be null as no matching records are found
+              Here only the pokemon for which there exists a matching type is
+              returned. But the catch is that in the result, you can only select
+              columns available in the left table
             </p>
           </div>
         </div>

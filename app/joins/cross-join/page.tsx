@@ -1,7 +1,7 @@
 import Image from "next/image";
-import duskullSprite from "@/public/images/sprites/duskull.png";
-import umbreonSprite from "@/public/images/sprites/umbreon.png";
-import alakazamSprite from "@/public/images/sprites/alakazam.png";
+import dragonairSprite from "@/public/images/sprites/dragonair.png";
+import sylveonSprite from "@/public/images/sprites/sylveon.png";
+import caterpieSprite from "@/public/images/sprites/caterpie.png";
 import Table from "@/app/components/Table";
 
 // dragon, fairy, bug
@@ -12,9 +12,9 @@ export default function CrossJoin() {
       {/* Heading and synonym */}
       <section id="header-section">
         <div className="flex flex-col justify-center items-start">
-          <h3>Right join</h3>
+          <h3>Cross join</h3>
           <span className="text-sm text-gray-500 dark:text-sky-400">
-            (right outer join)
+            (cartesian join)
           </span>
         </div>
       </section>
@@ -22,30 +22,28 @@ export default function CrossJoin() {
       <section id="description-section">
         <div className="flex flex-col justify-center items-start">
           <p>
-            A right join, within the realm of relational databases and SQL
+            A cross join, in the realm of relational databases and SQL
             (Structured Query Language), is a query operation that combines data
-            from two or more tables based on a specified condition or common
-            column values. <br />
+            from two or more tables without the need for a specified condition
+            or common column values. <br />
             <br />
-            Unlike an inner join, which only retrieves rows with matching values
-            in both tables, a right join includes all rows from the right (or
-            second) table and the matching rows from the left (or first) table.
-            If there are no matching rows in the left table, the result will
-            still contain data from the right table, with null values for the
-            left table columns. <br />
+            Unlike other join types that rely on matching data, a cross join
+            produces a result set that contains all possible combinations of
+            rows from the participating tables. It effectively forms the
+            Cartesian product, where each row from the first table is combined
+            with every row from the second table. <br />
             <br />
-            In simpler terms, a right join returns a result set that preserves
-            all records from the right table while incorporating related data
-            from the left table when available, making it a useful tool for
-            scenarios where you want to maintain the integrity of the right
-            table data and include associated information from the left table.{" "}
+            In simpler terms, a cross join creates a comprehensive result set,
+            encompassing every record from both tables, without regard to any
+            relationships or conditions. It is a valuable tool when you need to
+            generate all possible combinations of data or when no specific
+            matching criteria are needed. <br />
             <br />
-            <br />
-            This operation is commonly employed to analyze data relationships,
-            track missing data, and create comprehensive reports that include
-            all available information from the right table and any related data
-            from the left table. It a valuable feature for data analysis and
-            reporting in relational database systems. <br />
+            This operation is often employed in scenarios where you want to
+            explore all possible pairings of data or when you need to perform
+            calculations or comparisons across multiple datasets. It is a useful
+            feature for various data analysis and reporting tasks within
+            relational database systems. <br />
           </p>
         </div>
       </section>
@@ -64,14 +62,9 @@ export default function CrossJoin() {
             </span>
             <span className="italic"> table1 </span>
             <span className="font-bold text-gray-700 dark:text-sky-300">
-              RIGHT JOIN{" "}
+              CROSS JOIN{" "}
             </span>
             <span className="italic">table2</span>
-            <br />{" "}
-            <span className="font-bold text-gray-600 dark:text-sky-400">
-              ON{" "}
-            </span>
-            table1.column_name = table2.column_name;
           </p>
         </div>
       </section>
@@ -81,10 +74,9 @@ export default function CrossJoin() {
           <div>
             <h4>Example</h4>
             <p>
-              In this example, we will perform a right join between left table
+              In this example, we will perform a cross join between left table
               pokemon and right table pokemonTypes to display the pokemon name
-              with its type by joining pokemon.typeId column with pokemonType.id
-              column.
+              with its type
             </p>
           </div>
           <div>
@@ -107,36 +99,36 @@ export default function CrossJoin() {
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td>duskull</td>
+                  <td>dragonair</td>
                   <td>type1</td>
                   <td>
                     <Image
-                      src={duskullSprite}
-                      alt="duskull-sprite"
+                      src={dragonairSprite}
+                      alt="dragonair-sprite"
                       width={50}
                     />
                   </td>
                 </tr>
                 <tr>
                   <td>2</td>
-                  <td>umbreon</td>
+                  <td>sylveon</td>
                   <td>type2</td>
                   <td>
                     <Image
-                      src={umbreonSprite}
-                      alt="umbreon-sprite"
+                      src={sylveonSprite}
+                      alt="sylveon-sprite"
                       width={50}
                     />
                   </td>
                 </tr>
                 <tr>
                   <td>3</td>
-                  <td>alakazam</td>
+                  <td>caterpie</td>
                   <td>type3</td>
                   <td>
                     <Image
-                      src={alakazamSprite}
-                      alt="alakazam-sprite"
+                      src={caterpieSprite}
+                      alt="caterpie-sprite"
                       width={50}
                     />
                   </td>
@@ -155,40 +147,24 @@ export default function CrossJoin() {
                 <tr>
                   <td>type1</td>
                   <td>
-                    <span className="bg-zinc-700  px-4 rounded-md py-1 text-white">
-                      ghost
+                    <span className="bg-indigo-600  px-4 rounded-md py-1 text-white">
+                      dragon
                     </span>
                   </td>
                 </tr>
                 <tr>
                   <td>type2</td>
                   <td>
-                    <span className="bg-black  px-4 rounded-md py-1 text-white">
-                      dark
+                    <span className="bg-pink-300  px-4 rounded-md py-1 text-slate-900">
+                      fairy
                     </span>
                   </td>
                 </tr>
                 <tr>
                   <td>type3</td>
                   <td>
-                    <span className="bg-rose-300  px-4 rounded-md py-1 text-slate-900">
-                      psychic
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>type4</td>
-                  <td>
-                    <span className="bg-yellow-300  px-4 rounded-md py-1 text-slate-900">
-                      electric
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>type5</td>
-                  <td>
-                    <span className="bg-blue-300  px-4 rounded-md py-1 text-slate-900">
-                      water
+                    <span className="bg-emerald-700  px-4 rounded-md py-1 text-slate-900">
+                      bug
                     </span>
                   </td>
                 </tr>
@@ -210,14 +186,10 @@ export default function CrossJoin() {
               </span>
               <span className="italic"> pokemon as p </span>
               <span className="font-bold text-gray-700 dark:text-sky-300">
-                RIGHT JOIN{" "}
+                CROSS JOIN{" "}
               </span>
               <span className="italic">pokemonType as t</span>
-              <br />{" "}
-              <span className="font-bold text-gray-600 dark:text-sky-400">
-                ON{" "}
-              </span>
-              p.typeId = t.id;
+              <br />
             </p>
           </div>
           <div>
@@ -234,82 +206,138 @@ export default function CrossJoin() {
               </thead>
               <tbody>
                 <tr>
-                  <td>duskull</td>
+                  <td>dragonair</td>
                   <td>
-                    <span className="bg-zinc-700  px-4 rounded-md py-1 text-white">
-                      ghost
+                  <span className="bg-indigo-600  px-4 rounded-md py-1 text-white">
+                      dragon
                     </span>
                   </td>
                   <td>
                     <Image
-                      src={duskullSprite}
-                      alt="duskull-sprite"
+                      src={dragonairSprite}
+                      alt="dragonair-sprite"
                       width={50}
                     />
                   </td>
                 </tr>
                 <tr>
-                  <td>umbreon</td>
+                  <td>dragonair</td>
                   <td>
-                    <span className="bg-black  px-4 rounded-md py-1 text-white">
-                      dark
+                    <span className="bg-pink-300  px-4 rounded-md py-1 text-slate-900">
+                      fairy
                     </span>
                   </td>
                   <td>
                     <Image
-                      src={umbreonSprite}
-                      alt="duskull-sprite"
+                      src={dragonairSprite}
+                      alt="dragonair-sprite"
                       width={50}
                     />
                   </td>
                 </tr>
                 <tr>
-                  <td>alakazam</td>
+                  <td>dragonair</td>
+                  <td>
+                  <span className="bg-emerald-700  px-4 rounded-md py-1 text-slate-900">
+                      bug
+                    </span>
+                  </td>
+                  <td>
+                    <Image
+                      src={dragonairSprite}
+                      alt="dragonair-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>sylveon</td>
+                  <td>
+                    <span className="bg-indigo-600  px-4 rounded-md py-1 text-white">
+                      dragon
+                    </span>
+                  </td>
+                  <td>
+                    <Image
+                      src={sylveonSprite}
+                      alt="dragonair-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>sylveon</td>
+                  <td>
+                    <span className="bg-pink-300  px-4 rounded-md py-1 text-slate-900 ">
+                      fairy
+                    </span>
+                  </td>
+                  <td>
+                    <Image
+                      src={sylveonSprite}
+                      alt="dragonair-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>sylveon</td>
+                  <td>
+                    <span className="bg-emerald-700  px-4 rounded-md py-1 text-slate-900">
+                      bug
+                    </span>
+                  </td>
+                  <td>
+                    <Image
+                      src={sylveonSprite}
+                      alt="dragonair-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>caterpie</td>
+                  <td>
+                    <span className="bg-indigo-600  px-4 rounded-md py-1 text-white">
+                      dragon
+                    </span>
+                  </td>
+                  <td>
+                    <Image
+                      src={caterpieSprite}
+                      alt="dragonair-sprite"
+                      width={50}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>caterpie</td>
                   <td>
                     <span className="bg-rose-300  px-4 rounded-md py-1 text-slate-900">
-                      psychic
+                      fairy
                     </span>
                   </td>
                   <td>
                     <Image
-                      src={alakazamSprite}
-                      alt="duskull-sprite"
+                      src={caterpieSprite}
+                      alt="dragonair-sprite"
                       width={50}
                     />
                   </td>
                 </tr>
                 <tr>
+                  <td>caterpie</td>
                   <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
-                      null
+                    <span className="bg-emerald-700  px-4 rounded-md py-1 text-slate-900">
+                      bug
                     </span>
                   </td>
                   <td>
-                    <span className="bg-yellow-300  px-4 rounded-md py-1 text-slate-900">
-                      electric
-                    </span>
-                  </td>
-                  <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
-                      null
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
-                      null
-                    </span>
-                  </td>
-                  <td>
-                    <span className="bg-blue-300  px-4 rounded-md py-1 text-slate-900">
-                      water
-                    </span>
-                  </td>
-                  <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
-                      null
-                    </span>
+                    <Image
+                      src={caterpieSprite}
+                      alt="dragonair-sprite"
+                      width={50}
+                    />
                   </td>
                 </tr>
               </tbody>
@@ -317,10 +345,8 @@ export default function CrossJoin() {
           </div>
           <div>
             <p>
-              Here all types from right tables are returned in the result. But
-              from the left table, only matching pokemon duskull, umbreon and
-              alakazam are returned whereas for types electric and water, their
-              pokemon will be null as no matching records are found
+              Here the result contains a product of all possible pokemon and
+              pokemon type combinations. Dragonair, Caterpie and Sylveon have a record for types dragon, fairy and bug each.
             </p>
           </div>
         </div>
