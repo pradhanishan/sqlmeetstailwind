@@ -18,10 +18,7 @@ export default function SelfJoin() {
       {/* Heading and synonym */}
       <section id="header-section">
         <div className="flex flex-col justify-center items-start">
-          <h3>Right join</h3>
-          <span className="text-sm text-gray-500 dark:text-sky-400">
-            (right outer join)
-          </span>
+          <h3>Self join</h3>
         </div>
       </section>
       {/* Description about the join */}

@@ -20,7 +20,7 @@ export default function InnerJoin() {
       <section id="description-section">
         <div className="flex flex-col justify-center items-start">
           <p>
-            In the realm of relational databases and SQL (Structured Query
+            In the domain of relational databases and SQL (Structured Query
             Language), an inner join serves as a query operation, merging data
             from two or more tables based on a specified condition or common
             column values. It exclusively retrieves rows where the joined

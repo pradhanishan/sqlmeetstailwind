@@ -34,7 +34,7 @@ export default function RightJoin() {
             <br /> In simpler terms, a right join yields a result set that
             retains all records from the right table while integrating related
             data from the left table when available. This proves to be a
-            valuable tool in scenarios where the integrity of the right table's
+            valuable tool in scenarios where the integrity of the right table
             data must be preserved while incorporating associated information
             from the left table.
             <br />
