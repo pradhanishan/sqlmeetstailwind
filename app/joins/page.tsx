@@ -1,6 +1,5 @@
 import React from "react";
 import JoinTypeCard from "../components/JoinTypeCard";
-
 import innerJoinImage from "@/public/images/joins/inner-join.png";
 import leftJoinImage from "@/public/images/joins/left-join.png";
 import rightJoinImage from "@/public/images/joins/right-join.png";
@@ -10,7 +9,6 @@ import semiJoinImage from "@/public/images/joins/semi-join.png";
 import anitJoinImage from "@/public/images/joins/anti-join.png";
 import naturalJoinImage from "@/public/images/joins/natural-join.png";
 import selfJoinImage from "@/public/images/joins/self-join.png";
-import { StaticImageData } from "next/image";
 import NavigationButtonsContainer from "../components/navigation/NavigationButtonsContainer";
 
 export default function Joins() {
@@ -115,9 +113,10 @@ export default function Joins() {
         <p>
           When composing a query to join two tables in SQL, you begin by
           indicating the desired type of join. This is followed by the use of
-          the &ldquo;JOIN&ldquo; keyword and the &ldquo;ON&ldquo; keyword, specifying the columns that
-          form the basis for the join. For example,
+          the &ldquo;JOIN&ldquo; keyword and the &ldquo;ON&ldquo; keyword,
+          specifying the columns that form the basis for the join. For example,
         </p>
+
         <div className="flex flex-col justify-center items-start py-8">
           <p className="font-mono">
             <span className="font-bold text-orange-500 dark:text-sky-400">
@@ -162,7 +161,10 @@ export default function Joins() {
           </div>
         </div>
       </section>
-      <NavigationButtonsContainer backLink="/introduction" nextLink="/joins/inner-join"/>
+      <NavigationButtonsContainer
+        backLink="/introduction"
+        nextLink="/joins/inner-join"
+      />
     </main>
   );
 }

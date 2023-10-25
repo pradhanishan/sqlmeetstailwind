@@ -246,7 +246,7 @@ export default function FullJoin() {
                 <tr>
                   <td>cranidos</td>
                   <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
+                    <span className="px-4 font-bold rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
                       null
                     </span>
                   </td>
@@ -276,7 +276,7 @@ export default function FullJoin() {
                 <tr>
                   <td>riolu</td>
                   <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
+                    <span className="px-4 font-bold rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
                       null
                     </span>
                   </td>
@@ -290,7 +290,7 @@ export default function FullJoin() {
                 </tr>
                 <tr>
                   <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
+                    <span className="px-4 font-bold rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
                       null
                     </span>
                   </td>
@@ -300,14 +300,14 @@ export default function FullJoin() {
                     </span>
                   </td>
                   <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
+                    <span className="px-4 font-bold rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
                       null
                     </span>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
+                    <span className="px-4 font-bold rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
                       null
                     </span>
                   </td>
@@ -317,7 +317,7 @@ export default function FullJoin() {
                     </span>
                   </td>
                   <td>
-                    <span className="px-4 rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
+                    <span className="px-4 font-bold rounded-md py-1 text-orange-500 dark:text-sky-400 italic">
                       null
                     </span>
                   </td>
