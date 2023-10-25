@@ -10,6 +10,11 @@ import anitJoinImage from "@/public/images/joins/anti-join.png";
 import naturalJoinImage from "@/public/images/joins/natural-join.png";
 import selfJoinImage from "@/public/images/joins/self-join.png";
 import NavigationButtonsContainer from "../components/navigation/NavigationButtonsContainer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Joins"
+};
 
 export default function Joins() {
   const joinTypes = [

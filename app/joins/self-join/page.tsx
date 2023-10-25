@@ -13,6 +13,13 @@ import empoleonSprite from "@/public/images/sprites/empoleon.png";
 
 import Table from "@/app/components/Table";
 import NavigationButtonsContainer from "@/app/components/navigation/NavigationButtonsContainer";
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Self Join"
+};
+
 export default function SelfJoin() {
   return (
     <main>

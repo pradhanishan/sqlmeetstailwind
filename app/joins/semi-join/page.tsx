@@ -5,7 +5,11 @@ import arbokSprite from "@/public/images/sprites/arbok.png";
 import jolteonSprite from "@/public/images/sprites/jolteon.png";
 import Table from "@/app/components/Table";
 import NavigationButtonsContainer from "@/app/components/navigation/NavigationButtonsContainer";
-// normal, flying, fighting, poison, electric
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Semi Join"
+};
 export default function SemiJoin() {
   return (
     <main>

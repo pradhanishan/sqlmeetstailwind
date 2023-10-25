@@ -4,6 +4,13 @@ import umbreonSprite from "@/public/images/sprites/umbreon.png";
 import alakazamSprite from "@/public/images/sprites/alakazam.png";
 import Table from "@/app/components/Table";
 import NavigationButtonsContainer from "@/app/components/navigation/NavigationButtonsContainer";
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Right Join"
+};
+
 export default function RightJoin() {
   return (
     <main>

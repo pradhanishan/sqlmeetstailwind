@@ -6,6 +6,13 @@ import charmeleonSprite from "@/public/images/sprites/charmeleon.png";
 import eeveeSprite from "@/public/images/sprites/eevee.png";
 import Table from "@/app/components/Table";
 import NavigationButtonsContainer from "@/app/components/navigation/NavigationButtonsContainer";
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Left Join"
+};
+
 export default function LeftJoin() {
   return (
     <main>

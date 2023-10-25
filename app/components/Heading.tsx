@@ -16,7 +16,7 @@ export default function Heading() {
         duration-300 
         `}
         >
-          SQL Joins
+          SQL Meets
         </h1>
         {/* text below heading */}
         <span
@@ -25,7 +25,7 @@ export default function Heading() {
         group-focus:text-white dark:group-focus:text-sky-400 group-focus:animate-bounce
         duration-300`}
         >
-          simplified
+          tailwind
         </span>
       </div>
     </Link>
