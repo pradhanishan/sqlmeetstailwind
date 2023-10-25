@@ -5,6 +5,7 @@ import hippowdonSprite from "@/public/images/sprites/hippowdon.png";
 import rioluSprite from "@/public/images/sprites/riolu.png";
 
 import Table from "@/app/components/Table";
+import NavigationButtonsContainer from "@/app/components/navigation/NavigationButtonsContainer";
 export default function FullJoin() {
   return (
     <main>
@@ -61,7 +62,7 @@ export default function FullJoin() {
               FROM
             </span>
             <span className="italic"> table1 </span>
-            <span className="font-bold text-gray-700 dark:text-sky-300">
+            <span className="font-bold text-orange-600 dark:text-sky-300">
               FULL JOIN{" "}
             </span>
             <span className="italic">table2</span>
@@ -207,7 +208,7 @@ export default function FullJoin() {
                 FROM
               </span>
               <span className="italic"> pokemon as p </span>
-              <span className="font-bold text-gray-700 dark:text-sky-300">
+              <span className="font-bold text-orange-600 dark:text-sky-300">
                 FULL JOIN{" "}
               </span>
               <span className="italic">pokemonType as t</span>
@@ -332,7 +333,10 @@ export default function FullJoin() {
             </p>
           </div>
         </div>
-      </section>
+      </section><NavigationButtonsContainer
+        backLink="/joins/right-join"
+        nextLink="/joins/cross-join"
+      />
     </main>
   );
 }

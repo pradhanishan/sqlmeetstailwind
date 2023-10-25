@@ -4,6 +4,7 @@ import corvisquireSprite from "@/public/images/sprites/corvisquire.png";
 import arbokSprite from "@/public/images/sprites/arbok.png";
 import jolteonSprite from "@/public/images/sprites/jolteon.png";
 import Table from "@/app/components/Table";
+import NavigationButtonsContainer from "@/app/components/navigation/NavigationButtonsContainer";
 // normal, flying, fighting, poison, electric
 export default function SemiJoin() {
   return (
@@ -59,12 +60,12 @@ export default function SemiJoin() {
               FROM
             </span>
             <span className="italic"> table1 t1 </span>
-            <span className="font-bold text-gray-700 dark:text-sky-300">
+            <span className="font-bold text-orange-600 dark:text-sky-300">
               LEFT SEMI JOIN{" "}
             </span>
             <span className="italic"> table2 t2 </span>
             <br />
-            <span className="font-bold text-gray-700 dark:text-sky-300">
+            <span className="font-bold text-orange-600 dark:text-sky-300">
               ON{" "}
             </span>
             <br />
@@ -181,7 +182,7 @@ export default function SemiJoin() {
                 FROM
               </span>
               <span className="italic"> pokemon as p </span>
-              <span className="font-bold text-gray-700 dark:text-sky-300">
+              <span className="font-bold text-orange-600 dark:text-sky-300">
                 LEFT SEMI JOIN{" "}
               </span>
               <span className="italic">pokemonType as t</span>
@@ -233,7 +234,10 @@ export default function SemiJoin() {
             </p>
           </div>
         </div>
-      </section>
+      </section><NavigationButtonsContainer
+        backLink="/joins/cross-join"
+        nextLink="/joins/anti-join"
+      />
     </main>
   );
 }

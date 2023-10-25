@@ -6,6 +6,7 @@ import vaporeonSprite from "@/public/images/sprites/vaporeon.png";
 import duskullSprite from "@/public/images/sprites/duskull.png";
 import alakazamSprite from "@/public/images/sprites/alakazam.png";
 import Table from "@/app/components/Table";
+import NavigationButtonsContainer from "@/app/components/navigation/NavigationButtonsContainer";
 // fire, water, normal, riolu, ghost, psychic
 export default function AntiJoin() {
   return (
@@ -62,7 +63,7 @@ export default function AntiJoin() {
               FROM
             </span>
             <span className="italic"> table1 t1 </span>
-            <span className="font-bold text-gray-700 dark:text-sky-300">
+            <span className="font-bold text-orange-600 dark:text-sky-300">
               LEFT ANTI JOIN{" "}
             </span>
             <span className="italic">table2 t2</span>
@@ -228,7 +229,7 @@ export default function AntiJoin() {
                 FROM
               </span>
               <span className="italic"> pokemon as p </span>
-              <span className="font-bold text-gray-700 dark:text-sky-300">
+              <span className="font-bold text-orange-600 dark:text-sky-300">
                 LEFT ANTI JOIN{" "}
               </span>
               <span className="italic">pokemonType as t</span>
@@ -278,7 +279,10 @@ export default function AntiJoin() {
             </p>
           </div>
         </div>
-      </section>
+      </section><NavigationButtonsContainer
+        backLink="/joins/semi-join"
+        nextLink="/joins/natural-join"
+      />
     </main>
   );
 }

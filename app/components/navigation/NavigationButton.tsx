@@ -13,7 +13,7 @@ export default function NavigationButton({
   return (
     <Link href={href}>
       <div
-        className="px-4 rounded-sm py-1 sm:py-2 flex 
+        className="px-4 rounded-md py-4 lg:py-3 flex 
         bg-gray-200 text-slate-900 capitalize text-sm
         dark:bg-slate-900 dark:text-white
         dark:border dark:border-sky-800
