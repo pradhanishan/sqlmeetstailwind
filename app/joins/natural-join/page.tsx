@@ -19,6 +19,13 @@ import vaporeonSprite from "@/public/images/sprites/vaporeon.png";
 import charmeleonSprite from "@/public/images/sprites/charmeleon.png";
 import Table from "@/app/components/Table";
 import NavigationButtonsContainer from "@/app/components/navigation/NavigationButtonsContainer";
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Natural Join"
+};
+
 export default function NaturalJoin() {
   return (
     <main>

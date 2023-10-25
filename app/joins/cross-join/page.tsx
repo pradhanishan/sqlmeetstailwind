@@ -5,7 +5,11 @@ import caterpieSprite from "@/public/images/sprites/caterpie.png";
 import Table from "@/app/components/Table";
 import NavigationButtonsContainer from "@/app/components/navigation/NavigationButtonsContainer";
 
-// dragon, fairy, bug
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cross Join"
+};
 
 export default function CrossJoin() {
   return (

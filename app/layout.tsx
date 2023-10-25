@@ -9,8 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | SQL Joins Simplified",
-    default: "SQL Joins", // a default is required when creating a template
+    template: "%s | SQL Meets Tailwind",
+    default: "SQL Meets Tailwind", // a default is required when creating a template
   },
   description: "Learn what sql joins are, their types, syntax and use cases.",
 };

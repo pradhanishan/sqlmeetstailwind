@@ -5,6 +5,12 @@ import vaporeonSprite from "@/public/images/sprites/vaporeon.png";
 import jolteonSprite from "@/public/images/sprites/jolteon.png";
 import Table from "@/app/components/Table";
 import NavigationButtonsContainer from "@/app/components/navigation/NavigationButtonsContainer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Inner Join"
+};
+
 export default function InnerJoin() {
   return (
     <main>

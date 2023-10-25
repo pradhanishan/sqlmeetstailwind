@@ -7,13 +7,21 @@ export default function Home() {
     <main>
       <div className="flex justify-center items-center flex-col space-y-8">
         <p className="lg:w-3/4">
-          Welcome to SQL Joins Simplified, where we are going to embark on a
+          Welcome to SQL Meets Tailwind, where we are going to embark on a
           Pokémon-filled adventure through the world of SQL joins! <br />
+          <br />I made this website to learn 
+          <span className="text-sky-400 hover:font-bold duration-300 transition-all px-2">
+            <a href="https://tailwindcss.com/docs/installation" target="_blank">
+               tailwind css
+            </a>
+          </span>
+          , and in the spirit of sharing knowledge, I decided to sprinkle in
+          some SQL join wisdom for my future zero site visitors. So cheers!{" "}
           <br />
-          Are you ready to join us as we journey through the captivating realm
-          of SQL joins, all while diving into the exciting world of Pokémon? We
-          will explore different types of SQL joins and discover the art of
-          crafting join queries using Pokémon data, making your learning
+          <br /> Are you ready to join us as we journey through the captivating
+          realm of SQL joins, all while diving into the exciting world of
+          Pokémon? We will explore different types of SQL joins and discover the
+          art of crafting join queries using Pokémon data, making your learning
           experience as thrilling as a Pokémon battle! <br />
           <br />
         </p>

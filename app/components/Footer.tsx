@@ -41,6 +41,12 @@ export default function Footer() {
             </a>
           </span>
         </div>
+        <div className="space-x-2">
+          <span className="lowercase text-sm font-mono">Everything else :</span>
+          <span className="lowercase text-sm font-mono dark:text-sky-300 text-sky-200">
+            Ishan Pradhan
+          </span>
+        </div>
       </div>
     </div>
   );

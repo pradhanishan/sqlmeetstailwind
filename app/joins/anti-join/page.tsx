@@ -7,7 +7,13 @@ import duskullSprite from "@/public/images/sprites/duskull.png";
 import alakazamSprite from "@/public/images/sprites/alakazam.png";
 import Table from "@/app/components/Table";
 import NavigationButtonsContainer from "@/app/components/navigation/NavigationButtonsContainer";
-// fire, water, normal, riolu, ghost, psychic
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Anti Join"
+};
+
 export default function AntiJoin() {
   return (
     <main>

@@ -6,6 +6,12 @@ import rioluSprite from "@/public/images/sprites/riolu.png";
 
 import Table from "@/app/components/Table";
 import NavigationButtonsContainer from "@/app/components/navigation/NavigationButtonsContainer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Full Join"
+};
+
 export default function FullJoin() {
   return (
     <main>

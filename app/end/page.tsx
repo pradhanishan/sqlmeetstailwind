@@ -3,6 +3,12 @@ import Image from "next/image";
 import fillerImage from "@/public/images/img2.png";
 import fillerImageDark from "@/public/images/img6.png";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "End"
+};
+
 export default function End() {
   return (
     <main className=" justify-center items-center">
