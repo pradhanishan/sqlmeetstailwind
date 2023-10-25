@@ -10,9 +10,9 @@ export default function Home() {
           Welcome to SQL Meets Tailwind, where we are going to embark on a
           Pokémon-filled adventure through the world of SQL joins! <br />
           <br />I made this website to learn 
-          <span className="text-sky-400 hover:font-bold duration-300 transition-all">
+          <span className="text-sky-400 hover:font-bold duration-300 transition-all px-2">
             <a href="https://tailwindcss.com/docs/installation" target="_blank">
-              tailwind css
+               tailwind css
             </a>
           </span>
           , and in the spirit of sharing knowledge, I decided to sprinkle in
