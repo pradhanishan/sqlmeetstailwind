@@ -337,7 +337,7 @@ export default function SelfJoin() {
         </div>
       </section><NavigationButtonsContainer
         backLink="/joins/natural-join"
-        nextLink="/"
+        nextLink="/end"
       />
     </main>
   );

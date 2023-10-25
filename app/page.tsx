@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main>
       <div className="flex justify-center items-center flex-col space-y-8">
-        <p className="sm:pt-20 lg:w-3/4">
+        <p className="lg:w-3/4">
           Welcome to SQL Joins Simplified, where we are going to embark on a
           Pokémon-filled adventure through the world of SQL joins! <br />
           <br />
@@ -22,7 +22,8 @@ export default function Home() {
             src={fillerImage}
             alt="vaporeon umbreon jolteon"
             width={600}
-            className="dark:brightness-75" priority
+            className="dark:brightness-75"
+            priority
           />
         </div>
         <p className=" lg:w-3/4">
@@ -34,6 +35,7 @@ export default function Home() {
           knowledge! <br />
           <br />
         </p>
+
         <NextButton href="/joins" />
       </div>
     </main>
