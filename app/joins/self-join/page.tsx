@@ -12,6 +12,7 @@ import prinplupSprite from "@/public/images/sprites/prinplup.png";
 import empoleonSprite from "@/public/images/sprites/empoleon.png";
 
 import Table from "@/app/components/Table";
+import NavigationButtonsContainer from "@/app/components/navigation/NavigationButtonsContainer";
 export default function SelfJoin() {
   return (
     <main>
@@ -221,12 +222,12 @@ export default function SelfJoin() {
                 FROM
               </span>
               <span className="italic"> pokemon p1 </span>
-              <span className="font-bold text-gray-700 dark:text-sky-300">
+              <span className="font-bold text-orange-600 dark:text-sky-300">
                 INNER JOIN{" "}
               </span>
               <span className="italic">pokemon p2 ON p1.id = p2.parent_id</span>
               <br />{" "}
-              <span className="font-bold text-gray-700 dark:text-sky-300">
+              <span className="font-bold text-orange-600 dark:text-sky-300">
                 INNER JOIN{" "}
               </span>
               <span className="italic">pokemon p3 ON p2.id = p3.parent_id</span>
@@ -334,7 +335,10 @@ export default function SelfJoin() {
             </p>
           </div>
         </div>
-      </section>
+      </section><NavigationButtonsContainer
+        backLink="/joins/natural-join"
+        nextLink="/"
+      />
     </main>
   );
 }

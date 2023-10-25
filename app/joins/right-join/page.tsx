@@ -3,6 +3,7 @@ import duskullSprite from "@/public/images/sprites/duskull.png";
 import umbreonSprite from "@/public/images/sprites/umbreon.png";
 import alakazamSprite from "@/public/images/sprites/alakazam.png";
 import Table from "@/app/components/Table";
+import NavigationButtonsContainer from "@/app/components/navigation/NavigationButtonsContainer";
 export default function RightJoin() {
   return (
     <main>
@@ -59,7 +60,7 @@ export default function RightJoin() {
               FROM
             </span>
             <span className="italic"> table1 </span>
-            <span className="font-bold text-gray-700 dark:text-sky-300">
+            <span className="font-bold text-orange-600 dark:text-sky-300">
               RIGHT JOIN{" "}
             </span>
             <span className="italic">table2</span>
@@ -205,7 +206,7 @@ export default function RightJoin() {
                 FROM
               </span>
               <span className="italic"> pokemon as p </span>
-              <span className="font-bold text-gray-700 dark:text-sky-300">
+              <span className="font-bold text-orange-600 dark:text-sky-300">
                 RIGHT JOIN{" "}
               </span>
               <span className="italic">pokemonType as t</span>
@@ -320,7 +321,10 @@ export default function RightJoin() {
             </p>
           </div>
         </div>
-      </section>
+      </section><NavigationButtonsContainer
+        backLink="/joins/left-join"
+        nextLink="/joins/full-join"
+      />
     </main>
   );
 }

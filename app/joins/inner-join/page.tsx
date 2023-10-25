@@ -4,6 +4,7 @@ import treeckoSprite from "@/public/images/sprites/treecko.png";
 import vaporeonSprite from "@/public/images/sprites/vaporeon.png";
 import jolteonSprite from "@/public/images/sprites/jolteon.png";
 import Table from "@/app/components/Table";
+import NavigationButtonsContainer from "@/app/components/navigation/NavigationButtonsContainer";
 export default function InnerJoin() {
   return (
     <main>
@@ -50,7 +51,7 @@ export default function InnerJoin() {
               FROM
             </span>
             <span className="italic"> table1 </span>
-            <span className="font-bold text-gray-700 dark:text-sky-300">
+            <span className="font-bold text-orange-600 dark:text-sky-300">
               INNER JOIN{" "}
             </span>
             <span className="italic">table2</span>
@@ -192,7 +193,7 @@ export default function InnerJoin() {
                 FROM
               </span>
               <span className="italic"> pokemon as p </span>
-              <span className="font-bold text-gray-700 dark:text-sky-300">
+              <span className="font-bold text-orange-600 dark:text-sky-300">
                 INNER JOIN{" "}
               </span>
               <span className="italic">pokemonType as t</span>
@@ -272,6 +273,10 @@ export default function InnerJoin() {
           </div>
         </div>
       </section>
+      <NavigationButtonsContainer
+        backLink="/joins"
+        nextLink="/joins/left-join"
+      />
     </main>
   );
 }

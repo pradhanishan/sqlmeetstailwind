@@ -9,7 +9,7 @@ export default function NavigationButtonsContainer({
   nextLink: string;
 }) {
   return (
-    <div className="flex flex-row space-x-4">
+    <div className="flex flex-row space-x-4 justify-center items-center">
       <BackButton href={backLink} />
       <NextButton href={nextLink} />
     </div>

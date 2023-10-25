@@ -3,6 +3,7 @@ import dragonairSprite from "@/public/images/sprites/dragonair.png";
 import sylveonSprite from "@/public/images/sprites/sylveon.png";
 import caterpieSprite from "@/public/images/sprites/caterpie.png";
 import Table from "@/app/components/Table";
+import NavigationButtonsContainer from "@/app/components/navigation/NavigationButtonsContainer";
 
 // dragon, fairy, bug
 
@@ -61,7 +62,7 @@ export default function CrossJoin() {
               FROM
             </span>
             <span className="italic"> table1 </span>
-            <span className="font-bold text-gray-700 dark:text-sky-300">
+            <span className="font-bold text-orange-600 dark:text-sky-300">
               CROSS JOIN{" "}
             </span>
             <span className="italic">table2</span>
@@ -185,7 +186,7 @@ export default function CrossJoin() {
                 FROM
               </span>
               <span className="italic"> pokemon as p </span>
-              <span className="font-bold text-gray-700 dark:text-sky-300">
+              <span className="font-bold text-orange-600 dark:text-sky-300">
                 CROSS JOIN{" "}
               </span>
               <span className="italic">pokemonType as t</span>
@@ -351,7 +352,10 @@ export default function CrossJoin() {
             </p>
           </div>
         </div>
-      </section>
+      </section><NavigationButtonsContainer
+        backLink="/joins/full-join"
+        nextLink="/joins/semi-join"
+      />
     </main>
   );
 }

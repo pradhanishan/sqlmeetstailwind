@@ -5,6 +5,7 @@ import arbokSprite from "@/public/images/sprites/arbok.png";
 import charmeleonSprite from "@/public/images/sprites/charmeleon.png";
 import eeveeSprite from "@/public/images/sprites/eevee.png";
 import Table from "@/app/components/Table";
+import NavigationButtonsContainer from "@/app/components/navigation/NavigationButtonsContainer";
 export default function LeftJoin() {
   return (
     <main>
@@ -63,7 +64,7 @@ export default function LeftJoin() {
               FROM
             </span>
             <span className="italic"> table1 </span>
-            <span className="font-bold text-gray-700 dark:text-sky-300">
+            <span className="font-bold text-orange-600 dark:text-sky-300">
               LEFT JOIN{" "}
             </span>
             <span className="italic">table2</span>
@@ -209,7 +210,7 @@ export default function LeftJoin() {
                 FROM
               </span>
               <span className="italic"> pokemon as p </span>
-              <span className="font-bold text-gray-700 dark:text-sky-300">
+              <span className="font-bold text-orange-600 dark:text-sky-300">
                 LEFT JOIN{" "}
               </span>
               <span className="italic">pokemonType as t</span>
@@ -312,7 +313,10 @@ export default function LeftJoin() {
             </p>
           </div>
         </div>
-      </section>
+      </section><NavigationButtonsContainer
+        backLink="/joins/inner-join"
+        nextLink="/joins/right-join"
+      />
     </main>
   );
 }
