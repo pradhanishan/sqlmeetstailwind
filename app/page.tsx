@@ -1,12 +1,12 @@
-import BackButton from "./components/navigation/BackButton";
-import NavigationButtonsContainer from "./components/navigation/NavigationButtonsContainer";
+import Image from "next/image";
 import NextButton from "./components/navigation/NextButton";
+import fillerImage from "@/public/images/img4.png";
 
 export default function Home() {
   return (
     <main>
       <div className="flex justify-center items-center flex-col space-y-8">
-        <p className="sm:pt-20">
+        <p className="lg:w-3/4">
           Welcome to SQL Joins Simplified, where we are going to embark on a
           Pokémon-filled adventure through the world of SQL joins! <br />
           <br />
@@ -16,6 +16,17 @@ export default function Home() {
           crafting join queries using Pokémon data, making your learning
           experience as thrilling as a Pokémon battle! <br />
           <br />
+        </p>
+        <div className="overflow-hidden rounded-md shadow-lg w-fit">
+          <Image
+            src={fillerImage}
+            alt="vaporeon umbreon jolteon"
+            width={600}
+            className="dark:brightness-75"
+            priority
+          />
+        </div>
+        <p className=" lg:w-3/4">
           Whether you are a Poké-newbie looking to grasp the basics or a
           seasoned SQL pro aiming to refine your skills, this comprehensive
           guide will be your trusty PokéDex. By the end of this adventure, you
@@ -24,6 +35,7 @@ export default function Home() {
           knowledge! <br />
           <br />
         </p>
+
         <NextButton href="/joins" />
       </div>
     </main>

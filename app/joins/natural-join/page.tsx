@@ -74,11 +74,11 @@ export default function NaturalJoin() {
             <span className="font-bold text-orange-500 dark:text-sky-400">
               FROM
             </span>
-            <span className="italic"> table1 as t1</span>
+            <span className="italic"> table1 as t1 </span>
             <span className="font-bold text-orange-600 dark:text-sky-300">
               NATURAL JOIN
             </span>
-            <span className="italic">table2 as t2</span>
+            <span className="italic"> table2 as t2 </span>
             <br />{" "}
           </p>
         </div>
@@ -488,14 +488,9 @@ export default function NaturalJoin() {
               </span>
               <span className="italic"> pokemon as p </span>
               <span className="font-bold text-orange-600 dark:text-sky-300">
-                RIGHT JOIN{" "}
+                NATURAL JOIN {" "}
               </span>
-              <span className="italic">pokemonType as t</span>
-              <br />{" "}
-              <span className="font-bold text-orange-500 dark:text-sky-400">
-                ON{" "}
-              </span>
-              p.typeId = t.id;
+              <span className="italic"> pokemonType as t </span>
             </p>
           </div>
           <div>
