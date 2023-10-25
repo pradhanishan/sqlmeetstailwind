@@ -57,7 +57,7 @@ export default function FullJoin() {
       {/* Select syntax for the join */}
       <section id="query syntax">
         <div className="flex flex-col justify-center items-start">
-          <h4>Syntax</h4>
+          <h4>syntax</h4>
           <p className="font-mono">
             <span className="font-bold text-orange-500 dark:text-sky-400">
               SELECT{" "}
@@ -84,7 +84,7 @@ export default function FullJoin() {
       <section id="source-data-section">
         <div className=" space-y-8">
           <div>
-            <h4>Example</h4>
+            <h4>example</h4>
             <p>
               In this example, we will perform a full join between left table
               pokemon and right table pokemonTypes to display the pokemon name

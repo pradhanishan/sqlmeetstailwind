@@ -19,7 +19,7 @@ export default function Footer() {
       <div className="flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-8">
         <div className="space-x-2">
           <span className="lowercase text-sm font-mono">Text: </span>
-          <span className="lowercase text-sm font-mono dark:text-sky-300 text-sky-200">
+          <span className="hover:font-bold duration-300 transition-all lowercase text-sm font-mono dark:text-sky-300 text-sky-200">
             <a href="https://chat.openai.com/" target="_blank">
               ChatGPT
             </a>
@@ -27,7 +27,7 @@ export default function Footer() {
         </div>
         <div className="space-x-2">
           <span className="lowercase text-sm font-mono">Sprites :</span>
-          <span className="lowercase text-sm font-mono dark:text-sky-300 text-sky-200">
+          <span className="hover:font-bold duration-300 transition-all lowercase text-sm font-mono dark:text-sky-300 text-sky-200">
             <a href="https://pokemondb.net/sprites" target="_blank">
               pokemondb
             </a>
@@ -35,7 +35,7 @@ export default function Footer() {
         </div>
         <div className="space-x-2">
           <span className="lowercase text-sm font-mono">Images :</span>
-          <span className="lowercase text-sm font-mono dark:text-sky-300 text-sky-200">
+          <span className="hover:font-bold duration-300 transition-all lowercase text-sm font-mono dark:text-sky-300 text-sky-200">
             <a href="https://gencraft.com/" target="_blank">
               gencraft
             </a>
@@ -43,7 +43,7 @@ export default function Footer() {
         </div>
         <div className="space-x-2">
           <span className="lowercase text-sm font-mono">Everything else :</span>
-          <span className="lowercase text-sm font-mono dark:text-sky-300 text-sky-200">
+          <span className="hover:font-bold duration-300 transition-all lowercase text-sm font-mono dark:text-sky-300 text-sky-200">
             Ishan Pradhan
           </span>
         </div>
