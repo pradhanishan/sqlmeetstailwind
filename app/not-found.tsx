@@ -14,7 +14,7 @@ export default function NotFound() {
           src={fillerImage}
           alt="vaporeon umbreon jolteon"
           width={600}
-          className="dark:brightness-75"
+          className="dark:brightness-75" priority
         />
       </div>
       <BackButton href="/"/>

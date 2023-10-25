@@ -22,7 +22,7 @@ export default function Home() {
             src={fillerImage}
             alt="vaporeon umbreon jolteon"
             width={600}
-            className="hidden sm:inline-block dark:brightness-75"
+            className="dark:brightness-75" priority
           />
         </div>
         <p className=" lg:w-3/4">
