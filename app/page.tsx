@@ -1,4 +1,6 @@
-import Link from "next/link";
+import BackButton from "./components/navigation/BackButton";
+import NavigationButtonsContainer from "./components/navigation/NavigationButtonsContainer";
+import NextButton from "./components/navigation/NextButton";
 
 export default function Home() {
   return (
@@ -22,19 +24,7 @@ export default function Home() {
           knowledge! <br />
           <br />
         </p>
-        <Link href="/joins">
-          <div
-            className="px-8 py-6 rounded-md text-2xl
-         shadow-gray-400 shadow-md dark:shadow-md dark:shadow-sky-700
-         bg-gradient-to-r from-gray-200 to-gray-100 text-slate-900
-         dark:bg-gradient-to-br dark:to-slate-700 dark:from-sky-800 dark:text-gray-400
-         hover:scale-105 focus:scale-105 transition-all duration-300
-         hover:font-bold focus:font-bold lowercase hover:animate-pulse focus:animate-pulse
-         "
-          >
-            Start
-          </div>
-        </Link>
+        <NextButton href="/joins" />
       </div>
     </main>
   );
