@@ -9,10 +9,10 @@ export default function Home() {
         <p className="lg:w-3/4">
           Welcome to SQL Meets Tailwind, where we are going to embark on a
           Pokémon-filled adventure through the world of SQL joins! <br />
-          <br />I made this website to learn 
+          <br />I made this website to learn
           <span className="text-sky-400 hover:font-bold duration-300 transition-all px-2">
             <a href="https://tailwindcss.com/docs/installation" target="_blank">
-               tailwind css
+              tailwind css
             </a>
           </span>
           , and in the spirit of sharing knowledge, I decided to sprinkle in
@@ -25,7 +25,11 @@ export default function Home() {
           experience as thrilling as a Pokémon battle! <br />
           <br />
         </p>
-        <div className="overflow-hidden rounded-md shadow-lg w-fit">
+        <div
+          className="overflow-hidden rounded-md w-fit 
+        shadow-lg  shadow-gray-500 dark:shadow-md dark:shadow-sky-700 
+        "
+        >
           <Image
             src={fillerImage}
             alt="vaporeon umbreon jolteon"

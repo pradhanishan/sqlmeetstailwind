@@ -167,7 +167,7 @@ export default function Joins() {
         </div>
       </section>
       <NavigationButtonsContainer
-        backLink="/introduction"
+        backLink="/joins"
         nextLink="/joins/inner-join"
       />
     </main>

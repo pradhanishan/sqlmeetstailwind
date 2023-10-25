@@ -56,7 +56,7 @@ export default function SelfJoin() {
       {/* Select syntax for the join */}
       <section id="query syntax">
         <div className="flex flex-col justify-center items-start">
-          <h4>Syntax</h4>
+          <h4>syntax</h4>
           <p>
             Self join does not have a dedicated syntax. <br />
             <br />
@@ -68,7 +68,7 @@ export default function SelfJoin() {
       <section id="source-data-section">
         <div className=" space-y-8">
           <div>
-            <h4>Example</h4>
+            <h4>example</h4>
             <p>
               In this example, we will join pokemon table with itself twice to
               get an evolution line of a pokemon.

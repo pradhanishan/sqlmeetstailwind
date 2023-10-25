@@ -17,6 +17,7 @@ export default function JoinTypeCard({
         className="flex flex-col  w-fit justify-start items-center overflow-hidden rounded-md
     bg-gray-400 shadow-md dark:bg-slate-800 dark:shadow-sky-700 dark:shadow-sm group
         hover:shadow-zinc-500 dark:hover:shadow-sky-400 h-[200px]
+        hover:scale-105 duration-500 group
     "
       >
         <Image
@@ -29,8 +30,9 @@ export default function JoinTypeCard({
          transition-all duration-300 h-3/4 hover:backdrop:grayscale"
         />
         <h6
-          className="py-2 lowercase group-hover:animate-pulse
-       transition-all duration-300 font-mono text-sm" 
+          className="pb-2 pt-3 lowercase group-hover:animate-pulse
+       transition-all duration-300 font-mono text-sm 
+       group-hover:text-gray-500 dark:group-hover:text-sky-400" 
         >
           {joinType}
         </h6>

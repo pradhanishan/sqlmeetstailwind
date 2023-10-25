@@ -11,6 +11,7 @@ export default function Table({ children }: { children: React.ReactNode }) {
         bg-transparent rounded-md flex justify-center
         shadow-sm shadow-gray-700 
         dark:shadow-md
+        hover:scale-105 transition-all hover:duration-500
         dark:shadow-sky-700 max-w-fit
         "
     >
